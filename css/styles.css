@@ -257,9 +257,14 @@ body {
 }
 
 .cards-line-tow {
-  padding: 15px;
-  background-color: rgb(255, 200, 0);
-}
+    border: 2px solid #31bacb; 
+    border-radius: 5px;
+    padding: 10px; 
+    background-color: transparent; 
+  }
+  
+  
+
 
 /* 
 .main-title {
@@ -406,3 +411,4 @@ body {
     display: none;
   }
 }
+
