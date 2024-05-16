@@ -1,0 +1,65 @@
+{
+    "GenderDisributionByCountryAndRevenue": [
+      {
+        "Gender": "F",
+        "Country": "Australia",
+        "Revenue": 9221099
+      },
+      {
+        "Gender": "M",
+        "Country": "Australia",
+        "Revenue": 9113770
+      },
+      {
+        "Gender": "F",
+        "Country": "Canada",
+        "Revenue": 3187428
+      },
+      {
+        "Gender": "M",
+        "Country": "Canada",
+        "Revenue": 3682312
+      },
+      {
+        "Gender": "F",
+        "Country": "France",
+        "Revenue": 3554244
+      },
+      {
+        "Gender": "M",
+        "Country": "France",
+        "Revenue": 3888498
+      },
+      {
+        "Gender": "F",
+        "Country": "Germany",
+        "Revenue": 3870183
+      },
+      {
+        "Gender": "M",
+        "Country": "Germany",
+        "Revenue": 3778333
+      },
+      {
+        "Gender": "F",
+        "Country": "United Kingdom",
+        "Revenue": 4411142
+      },
+      {
+        "Gender": "M",
+        "Country": "United Kingdom",
+        "Revenue": 4577365
+      },
+      {
+        "Gender": "F",
+        "Country": "United States",
+        "Revenue": 11405876
+      },
+      {
+        "Gender": "M",
+        "Country": "United States",
+        "Revenue": 12221739
+      }
+    ]
+}
+  
