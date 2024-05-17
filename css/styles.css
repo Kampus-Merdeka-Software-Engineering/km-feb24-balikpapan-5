@@ -257,11 +257,37 @@ body {
 }
 
 .cards-line-tow {
-    border: 2px solid #31bacb; 
-    border-radius: 5px;
-    padding: 10px; 
-    background-color: transparent;
-  }
+  border: 2px solid #31bacb; 
+  border-radius: 5px;
+  padding: 10px; 
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#data-table {
+  width: 100%;
+}
+
+.table-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(237, 76, 103);
+  margin-top: 0;
+  font-size: 24px;
+}
+
+#data-table thead th {
+  background-color: #31bacb;
+  color: white;
+  vertical-align: top;
+}
   
   
 
