@@ -277,10 +277,11 @@ body {
 
 .table-container h1 {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   color: rgb(237, 76, 103);
   margin-top: 0;
   font-size: 24px;
+  background-color: #ccc;
 }
 
 #data-table thead th {
