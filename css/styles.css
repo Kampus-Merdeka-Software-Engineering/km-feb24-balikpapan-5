@@ -257,9 +257,9 @@ body {
 }
 
 .cards-line-tow {
-  border: 2px solid #31bacb; 
+  border: 2px solid #31bacb;
   border-radius: 5px;
-  padding: 10px; 
+  padding: 10px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -289,9 +289,6 @@ body {
   color: white;
   vertical-align: top;
 }
-  
-  
-
 
 /* 
 .main-title {
@@ -406,11 +403,11 @@ body {
     font-size: 0.6rem;
   } */
 
-  .main-title-number:hover{
+  .main-title-number:hover {
     background-color: #262626;
-    color:white;
+    color: white;
     transition: all;
-    transition-duration: .5ms;
+    transition-duration: 0.5ms;
     cursor: pointer;
   }
   .main-wan-title {
@@ -447,3 +444,50 @@ body {
   }
 }
 
+.filtering-container {
+  display: flex;
+  justify-content: start;
+}
+
+.multiselect {
+  width: 25%;
+  position: relative;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxes label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}

@@ -69,6 +69,46 @@
         <div class="main-title">
           <h2>DASHBOARD</h2>
         </div>
+        <div class="filtering-container">
+          <div class="multiselect">
+            <div class="selectBox">
+              <select>
+                <option>Select age</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes">
+              <label for="Adults (35-64)">
+                <input
+                  type="checkbox"
+                  id="Adults (35-64)"
+                  value="Adults (35-64)"
+                />Adults (35-64)</label
+              >
+              <label for="Young Adults (25-34)">
+                <input
+                  type="checkbox"
+                  id="Young Adults (25-34)"
+                  value="Young Adults (25-34)"
+                />Young Adults (25-34)</label
+              >
+              <label for="Youth (<25)">
+                <input
+                  type="checkbox"
+                  id="Youth (<25)"
+                  value="Youth (<25)"
+                />Youth (<25)</label
+              >
+              <label for="Seniors (64+)">
+                <input
+                  type="checkbox"
+                  id="Seniors (64+)"
+                  value="Seniors (64+)"
+                />Seniors (64+)</label
+              >
+            </div>
+          </div>
+        </div>
         <div class="main-cards">
           <div class="cards-wan">
             <div class="box-wan">
@@ -160,7 +200,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="index.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/bar-grup.js"></script>
     <script src="js/pie-charts.js"></script>

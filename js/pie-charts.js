@@ -1,3 +1,24 @@
+const filteringByAge = document.getElementById("checkboxes");
+const labelFiltering = filteringByAge.querySelectorAll(
+  "input[type='checkbox']"
+);
+let filteringByAgeChecked = [];
+for (let i = 0; i < labelFiltering.length; i++) {
+  labelFiltering[i].addEventListener("change", () => {
+    if (labelFiltering[i].checked) {
+      filteringByAgeChecked.push(labelFiltering[i].value);
+    } else {
+      const index = filteringByAgeChecked.indexOf(labelFiltering[i].value);
+      if (index > -1) {
+        filteringByAgeChecked.splice(index, 1);
+      }
+    }
+
+    // recall the drawchart everytime user doing filtering
+    google.charts.setOnLoadCallback(drawChart);
+  });
+}
+
 function drawChart() {
   fetch("../data/ageGroupDistributionData.json")
     .then((response) => response.json())
@@ -8,10 +29,20 @@ function drawChart() {
       data.addColumn("string", "Age Group");
       data.addColumn("number", "Percentage");
 
-      for (let i = 0; i < response.length; i++) {
-        let label = response[i].label;
-        let value = response[i].value;
-        data.addRow([label, value]);
+      if (filteringByAgeChecked.length == 0) {
+        for (let i = 0; i < response.length; i++) {
+          let label = response[i].label;
+          let value = response[i].value;
+          data.addRow([label, value]);
+        }
+      } else {
+        const filteredData = response.filter((item) =>
+          filteringByAgeChecked.includes(item.label)
+        );
+
+        filteredData.forEach((item) => {
+          data.addRow([item.label, item.value]);
+        });
       }
 
       let options = {
@@ -26,9 +57,8 @@ function drawChart() {
         legend: {
           position: "bottom",
           alignment: "center",
-
           textStyle: {
-            fontSize: 12,
+            fontSize: 6, //can customized
           },
         },
         pieSliceText: "percentage",
