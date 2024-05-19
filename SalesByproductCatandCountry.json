@@ -1,95 +1,94 @@
 {
-    "SalesByproductCategoryandCountry": [
-      {
-        "Sales": 200706,
-        "Country": "Australia",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 8392,
-        "Country": "Australia",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 48883,
-        "Country": "Australia",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 151513,
-        "Country": "Canada",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 1776,
-        "Country": "Canada",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 33627,
-        "Country": "Canada",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 100174,
-        "Country": "France",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 3219,
-        "Country": "France",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 23055,
-        "Country": "France",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 97474,
-        "Country": "Germany",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 3382,
-        "Country": "Germany",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 22691,
-        "Country": "Germany",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 120794,
-        "Country": "United Kingdom",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 3873,
-        "Country": "United Kingdom",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 29609,
-        "Country": "United Kingdom",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 370719,
-        "Country": "United States",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 8951,
-        "Country": "United States",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 86609,
-        "Country": "United States",
-        "ProductCategory": "Clothing"
-      }
-    ]
+  "SalesByproductCategoryandCountry": [
+    {
+      "Sales": 200706,
+      "Country": "Australia",
+      "ProductCategory": "Accessories"
+    },
+    {
+      "Sales": 8392,
+      "Country": "Australia",
+      "ProductCategory": "Bikes"
+    },
+    {
+      "Sales": 48883,
+      "Country": "Australia",
+      "ProductCategory": "Clothing"
+    },
+    {
+      "Sales": 151513,
+      "Country": "Canada",
+      "ProductCategory": "Accessories"
+    },
+    {
+      "Sales": 1776,
+      "Country": "Canada",
+      "ProductCategory": "Bikes"
+    },
+    {
+      "Sales": 33627,
+      "Country": "Canada",
+      "ProductCategory": "Clothing"
+    },
+    {
+      "Sales": 100174,
+      "Country": "France",
+      "ProductCategory": "Accessories"
+    },
+    {
+      "Sales": 3219,
+      "Country": "France",
+      "ProductCategory": "Bikes"
+    },
+    {
+      "Sales": 23055,
+      "Country": "France",
+      "ProductCategory": "Clothing"
+    },
+    {
+      "Sales": 97474,
+      "Country": "Germany",
+      "ProductCategory": "Accessories"
+    },
+    {
+      "Sales": 3382,
+      "Country": "Germany",
+      "ProductCategory": "Bikes"
+    },
+    {
+      "Sales": 22691,
+      "Country": "Germany",
+      "ProductCategory": "Clothing"
+    },
+    {
+      "Sales": 120794,
+      "Country": "United Kingdom",
+      "ProductCategory": "Accessories"
+    },
+    {
+      "Sales": 3873,
+      "Country": "United Kingdom",
+      "ProductCategory": "Bikes"
+    },
+    {
+      "Sales": 29609,
+      "Country": "United Kingdom",
+      "ProductCategory": "Clothing"
+    },
+    {
+      "Sales": 370719,
+      "Country": "United States",
+      "ProductCategory": "Accessories"
+    },
+    {
+      "Sales": 8951,
+      "Country": "United States",
+      "ProductCategory": "Bikes"
+    },
+    {
+      "Sales": 86609,
+      "Country": "United States",
+      "ProductCategory": "Clothing"
+    }
+  ]
 }
-  

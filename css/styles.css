@@ -405,6 +405,14 @@ body {
   /* .main-title-number{
     font-size: 0.6rem;
   } */
+
+  .main-title-number:hover{
+    background-color: #262626;
+    color:white;
+    transition: all;
+    transition-duration: .5ms;
+    cursor: pointer;
+  }
   .main-wan-title {
     font-size: 0.6rem;
   }
