@@ -5,7 +5,9 @@ body {
   color: #9e9ea4;
   font-family: "Montserrat", sans-serif;
 }
-
+.main-title{
+  font-size: 27px;
+}
 .material-icons-outlined {
   vertical-align: middle;
   line-height: 1px;
@@ -384,9 +386,12 @@ body {
   }
 }
 
-/* Small <= 768px */
 
-@media screen and (max-width: 768px) {
+
+/* Small <= 768px 
+diganti jd 936px */
+
+@media screen and (max-width: 936px) {
   .main-cards {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -395,6 +400,9 @@ body {
   .cards-wan {
     flex-direction: row;
   }
+  .cards-tree{
+    font-size: 2rem;
+  } 
   .box-wan {
     padding: 0.6rem;
     gap: 5px;
@@ -406,7 +414,7 @@ body {
     font-size: 0.6rem;
   } */
   .main-wan-title {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
   .main-title-icon i {
     font-size: 1rem;
@@ -422,14 +430,16 @@ body {
     margin-top: 30px;
   }
   .box-line-title {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     top: -10px;
   }
   .box-title-tow {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     left: 10px;
   }
 }
+
+
 
 /* Extra Small <= 576px */
 
@@ -437,5 +447,13 @@ body {
   .hedaer-left {
     display: none;
   }
-}
+  .box-line-wan {
+    font-size: 0.4rem;
+    top: 10px;
+  }
+  .box-line-title{
+    font-size: 0.6rem;
 
+  }
+
+}
