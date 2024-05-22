@@ -116,6 +116,201 @@ body {
   color: #262626;
 }
 
+/*filtering*/
+.filtering-container {
+  display: flex;
+  justify-content: start;
+  gap: 35px;
+  width: 100%;
+}
+
+.multiselect {
+  position: relative;
+}
+
+.selectBoxYear {
+  position: relative;
+}
+
+#selectBoxYear select {
+  height: 38px;
+  width: 170px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 30px;
+}
+
+#checkboxesYear {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxesYear label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+
+#checkboxesYear label:hover {
+  background-color: #31bacb;
+}
+
+.selectBoxProductCategory {
+  position: relative;
+}
+
+#selectBoxCountry select {
+  height: 38px;
+  width: 170px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+#checkboxesCountry {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxesCountry label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+
+#checkboxesCountry label:hover {
+  background-color: #31bacb;
+}
+
+.selectBoxProductCategory {
+  position: relative;
+}
+
+#selectBoxProductCategory select {
+  height: 38px;
+  width: 170px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+#checkboxesProductCategory {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxesProductCategory label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+
+#checkboxesProductCategory label:hover {
+  background-color: #31bacb;
+}
+
+.selectBoxSubCategory {
+  position: relative;
+}
+
+#selectBoxSubCategory select {
+  height: 38px;
+  width: 170px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+#checkboxesSubCategory {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  max-height: 200px; 
+  overflow-y: auto; 
+  width: 94%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxesSubCategory label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+
+#checkboxesSubCategory label:hover {
+  background-color: #31bacb;
+}
+
+.selectBoxProduct {
+  position: relative;
+}
+
+#selectBoxProduct select {
+  height: 38px;
+  width: 170px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+#checkboxesProduct {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  max-height: 200px; 
+  overflow-y: auto; 
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxesProduct label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+
+#checkboxesProduct label:hover {
+  background-color: #31bacb;
+}
+
 .main-cards {
   display: grid;
   grid-template-columns: 0.5fr 2fr 1fr;
@@ -396,6 +591,10 @@ diganti jd 936px */
     grid-template-columns: 1fr;
     gap: 10px;
     margin-bottom: 0;
+  }
+  .filtering-container{
+    flex-wrap: wrap;
+    gap: 20px;
   }
   .cards-wan {
     flex-direction: row;
