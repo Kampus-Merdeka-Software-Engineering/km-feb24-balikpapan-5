@@ -1,13 +1,21 @@
 function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-    ["Age Group", "Percentage"],
-    ["Adults (35-64)", 49.8],
-    ["Young Adults (25-34)", 35.9],
-    ["Youth (<25)", 13.9],
-    ["Seniors (64+)", 0.4], // Adding a value for seniors to match the legend in the provided image
-  ]);
+fetch("../data/ageGroupDisributionData.json")
+  .then((response) => response.json())
+  .then((response) => {const response = response.data;
 
-  var options = {
+  })
+
+  let data = new google.visualization.DataTable();
+  data.addColumn("String", "Age", "Group");
+  data.addColumn("number", "Percentage");
+
+  for (let i = 0; i < response.length; 1++) {
+    let label = response[i].label;
+    let value = response[i].value;
+    data.addRow([label, value]);
+  }
+
+  let  options = {
     height: 280,
     // width: 200,
     chartArea: {
@@ -35,7 +43,7 @@ function drawChart() {
     backgroundColor: "none",
   };
 
-  var chart = new google.visualization.PieChart(
+  let chart = new google.visualization.PieChart(
     document.getElementById("pie-chart")
   );
 
