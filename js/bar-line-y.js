@@ -4,29 +4,24 @@ let distributionChartCanvas = null;
 fetch('./data/GenderDisributionByCountryandRevenue.json')
   .then((response) => response.json())
   .then((responseData) => {
-    const datasets = responseData.datasets[0];
-    renderGenderDistributionByCountryAndRevenue(datasets.labels, datasets.data, datasets.value);
+
+    // convert data to millions
+    responseData.datasets.forEach(dataset => {
+      dataset.data = dataset.data.map(value => value / 1000000)
+    })
+    renderGenderDistributionByCountryandRevenue(responseData.labels, responseData.datasets);
   });
 
-const renderGenderDistributionByCountryAndRevenue = (labels, data, value) => {
+const renderGenderDistributionByCountryandRevenue = (labels, datasets) => {
   distributionChartCanvas = new Chart(distributionChart, {
     type: "bar",
     data: {
       labels: labels,
-      datasets: [
-        {
-          label: "Male",
-          data: data,
-          backgroundColor: "#00838F",
-        },
-        {
-          label: "Female",
-          data: value,
-          backgroundColor: "#4DD0E1",
-        }
-      ]
+      datasets: datasets
+
     },
     options: {
+      indexAxis: "y",
       scales: {
         x: {
           beginAtZero: true,
@@ -65,8 +60,8 @@ const renderGenderDistributionByCountryAndRevenue = (labels, data, value) => {
         datalabels: {
           anchor: "end",
           align: "right",
-          formatter: function (value, context) {
-            return value + " jt";
+          formatter: function (data, context) {
+            return data + "jt";
           },
           color: "white",
           font: {

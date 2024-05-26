@@ -1,64 +1,15 @@
 {
-    "datasets": [
-      {
-        "labels": "F",
-        "data": "Australia",
-        "value": 9221099
-      },
-      {
-        "labels": "M",
-        "data": "Australia",
-        "value": 9113770
-      },
-      {
-        "labels": "F",
-        "data": "Canada",
-        "value": 3187428
-      },
-      {
-        "labels": "M",
-        "data": "Canada",
-        "value": 3682312
-      },
-      {
-        "labels": "F",
-        "data": "France",
-        "value": 3554244
-      },
-      {
-        "labels": "M",
-        "data": "France",
-        "value": 3888498
-      },
-      {
-        "labels": "F",
-        "data": "Germany",
-        "value": 3870183
-      },
-      {
-        "labels": "M",
-        "data": "Germany",
-        "value": 3778333
-      },
-      {
-        "labels": "F",
-        "data": "United Kingdom",
-        "value": 4411142
-      },
-      {
-        "labels": "M",
-        "data": "United Kingdom",
-        "value": 4577365
-      },
-      {
-        "labels": "F",
-        "data": "United States",
-        "value": 11405876
-      },
-      {
-        "labels": "M",
-        "data": "United States",
-        "value": 12221739
-      }
-    ]
+  "labels": ["Australia", "Canada", "France", "Germany", "United Kingdom", "United States"],
+  "datasets": [
+    {
+      "label": "Female",
+      "data": [3846174, 1281365, 1474863, 1606793, 1922434, 4677598],
+      "backgroundColor": "#4DD0E1"
+    },
+    {
+      "label": "Male",
+      "data": [3993804, 1544310, 1604545, 1695302, 2012043, 4930002],
+      "backgroundColor": "#00838F"
+    }
+  ]
 }
