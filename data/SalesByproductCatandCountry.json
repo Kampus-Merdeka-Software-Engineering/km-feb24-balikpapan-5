@@ -1,95 +1,20 @@
-{
-    "SalesByproductCategoryandCountry": [
-      {
-        "Sales": 200706,
-        "Country": "Australia",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 8392,
-        "Country": "Australia",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 48883,
-        "Country": "Australia",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 151513,
-        "Country": "Canada",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 1776,
-        "Country": "Canada",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 33627,
-        "Country": "Canada",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 100174,
-        "Country": "France",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 3219,
-        "Country": "France",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 23055,
-        "Country": "France",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 97474,
-        "Country": "Germany",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 3382,
-        "Country": "Germany",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 22691,
-        "Country": "Germany",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 120794,
-        "Country": "United Kingdom",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 3873,
-        "Country": "United Kingdom",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 29609,
-        "Country": "United Kingdom",
-        "ProductCategory": "Clothing"
-      },
-      {
-        "Sales": 370719,
-        "Country": "United States",
-        "ProductCategory": "Accessories"
-      },
-      {
-        "Sales": 8951,
-        "Country": "United States",
-        "ProductCategory": "Bikes"
-      },
-      {
-        "Sales": 86609,
-        "Country": "United States",
-        "ProductCategory": "Clothing"
-      }
-    ]
-}
-  
+[
+  {"Country": "United States", "Product_Category": "Bikes", "Revenue": 5672522},
+  {"Country": "United States", "Product_Category": "Accessories", "Revenue": 2556064},
+  {"Country": "United States", "Product_Category": "Clothing", "Revenue": 1379014},
+  {"Country": "United Kingdom", "Product_Category": "Bikes", "Revenue": 2589744},
+  {"Country": "United Kingdom", "Product_Category": "Accessories", "Revenue": 908502},
+  {"Country": "United Kingdom", "Product_Category": "Clothing", "Revenue": 436231},
+  {"Country": "Germany", "Product_Category": "Bikes", "Revenue": 2249927},
+  {"Country": "Germany", "Product_Category": "Clothing", "Revenue": 308214},
+  {"Country": "Germany", "Product_Category": "Accessories", "Revenue": 743954},
+  {"Country": "France", "Product_Category": "Bikes", "Revenue": 2077801},
+  {"Country": "France", "Product_Category": "Accessories", "Revenue": 668162},
+  {"Country": "France", "Product_Category": "Clothing", "Revenue": 333445},
+  {"Country": "Canada", "Product_Category": "Bikes", "Revenue": 1131340},
+  {"Country": "Canada", "Product_Category": "Clothing", "Revenue": 593206},
+  {"Country": "Canada", "Product_Category": "Accessories", "Revenue": 1101129},
+  {"Country": "Australia", "Product_Category": "Bikes", "Revenue": 5805157},
+  {"Country": "Australia", "Product_Category": "Accessories", "Revenue": 1342553},
+  {"Country": "Australia", "Product_Category": "Clothing", "Revenue": 692268}
+]
