@@ -400,7 +400,7 @@ body {
   /* background: violet; */
 }
 .box-tow-bar {
-  border: 2px solid gray;
+  border: 2px solid black;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -411,7 +411,7 @@ body {
 }
 .box-title-tow {
   background-color: #d9d9d9;
-  color: red;
+  color: rgb(237, 76, 103);
   padding: 3px 13px;
   position: absolute;
   top: -12px;
@@ -421,6 +421,8 @@ body {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .cards-tree {
@@ -469,7 +471,7 @@ body {
 
 .box-line-wan {
   padding: 3px 13px;
-  border: 2px solid gray;
+  border: 2px solid black;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -481,7 +483,7 @@ body {
 .box-line-title {
   background-color: #d9d9d9;
   padding: 3px 13px;
-  color: red;
+  color: rgb(237, 76, 103);
   position: absolute;
   top: -15px;
   border-radius: 5px;
@@ -489,10 +491,12 @@ body {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .cards-line-tow {
-  border: 2px solid #31bacb; 
+  border: 2px solid black; 
   border-radius: 5px;
   padding: 15px; 
   background-color: transparent;
@@ -516,8 +520,12 @@ table {
   margin-bottom: 10px;
   color: rgb(237, 76, 103);
   margin-top: 0;
-  font-size: 24px;
-  background-color: #ccc;
+  font-size: 17px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+  width: 95%; /* Lebar sebagai persentase */
 }
 
 #data-table thead th {
