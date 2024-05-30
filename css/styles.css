@@ -120,23 +120,12 @@ body {
 .filtering-container {
   display: flex;
   justify-content: start;
-  gap: 35px;
+  gap: 25px;
   width: 100%;
 }
 
 .multiselect {
   position: relative;
-}
-
-.selectBoxYear {
-  position: relative;
-}
-
-#selectBoxYear select {
-  height: 38px;
-  width: 170px;
-  border-radius: 7px;
-  color: #9e9ea4;
 }
 
 .overSelect {
@@ -146,6 +135,17 @@ body {
   top: 0;
   bottom: 0;
   height: 30px;
+}
+
+.selectBoxYear {
+  position: relative;
+}
+
+#selectBoxYear select {
+  height: 38px;
+  width:170px;
+  border-radius: 7px;
+  color: #9e9ea4;
 }
 
 #checkboxesYear {
@@ -171,13 +171,13 @@ body {
   background-color: #31bacb;
 }
 
-.selectBoxProductCategory {
+.selectBoxCountry {
   position: relative;
 }
 
 #selectBoxCountry select {
   height: 38px;
-  width: 170px;
+  width:170px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -194,6 +194,40 @@ body {
 }
 
 #checkboxesCountry label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+
+#checkboxesCountry label:hover {
+  background-color: #31bacb;
+}
+
+.selectBoxAgeGroup {
+  position: relative;
+}
+
+#selectBoxAgeGroup select {
+  height: 38px;
+  width:170px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+#checkboxesAgeGroup {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxesAgeGroup label {
   display: block;
   margin-top: 4px;
   font-weight: 400;
@@ -239,13 +273,13 @@ body {
   background-color: #31bacb;
 }
 
-.selectBoxSubCategory {
+/* .selectBoxSubCategory {
   position: relative;
 }
 
 #selectBoxSubCategory select {
   height: 38px;
-  width: 170px;
+  width:170px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -273,7 +307,7 @@ body {
 
 #checkboxesSubCategory label:hover {
   background-color: #31bacb;
-}
+} */
 
 .selectBoxProduct {
   position: relative;
@@ -281,7 +315,7 @@ body {
 
 #selectBoxProduct select {
   height: 38px;
-  width: 170px;
+  width:170px;
   border-radius: 7px;
   color: #9e9ea4;
 }
