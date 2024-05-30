@@ -1,4 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Filtering by Country
+  const checkboxesCountry = document.getElementById("checkboxesCountry");
+  const countryInput = checkboxesCountry.querySelectorAll("input[type=checkbox]");
+
+  let selectedCountry = [];
+  for (let i = 0; i < countryInput.length; i++) {
+      countryInput[i].addEventListener("change", () => {
+          if (countryInput[i].checked) {
+              selectedCountry.push(countryInput[i].value);
+          } else {
+              const index = selectedCountry.indexOf(countryInput[i].value);
+              if (index > -1) {
+                  selectedCountry.splice(index, 1);
+              }
+          }
+          updateChart();
+      });
+  }
+
+  // Filtering by ProductCategory
+  const checkboxesProductCat = document.getElementById("checkboxesProductCategory");
+  const productCatInput = checkboxesProductCat.querySelectorAll("input[type=checkbox]");
+
+  let selectedProductCat = [];
+  for (let i = 0; i < productCatInput.length; i++) {
+      productCatInput[i].addEventListener("change", () => {
+          if (productCatInput[i].checked) {
+              selectedProductCat.push(productCatInput[i].value);
+          } else {
+              const index = selectedProductCat.indexOf(productCatInput[i].value);
+              if (index > -1) {
+                  selectedProductCat.splice(index, 1);
+              }
+          }
+          updateChart();
+      });
+  }
+
+  let chart;
+  let salesData;
+
   fetch('./data/SalesByproductCatandCountry.json')
       .then(response => {
           if (!response.ok) {
@@ -7,72 +48,79 @@ document.addEventListener('DOMContentLoaded', function () {
           return response.json();
       })
       .then(data => {
-          createStackedBarChart(data);
+          salesData = data;
+          updateChart();
       })
       .catch(error => {
           console.error('There was a problem with the fetch operation:', error);
       });
-});
 
-function createStackedBarChart(data) {
-  // Mengelompokkan data berdasarkan negara
-  const groupedData = data.reduce((acc, cur) => {
-      const key = cur.Country;
-      if (!acc[key]) {
-          acc[key] = {};
-      }
-      acc[key][cur.Product_Category] = cur.Revenue;
-      return acc;
-  }, {});
+  function updateChart() {
+      if (!salesData) return;
 
+      // Filter data based on selected countries and product categories
+      const filteredData = salesData.filter(item =>
+          (selectedCountry.length === 0 || selectedCountry.includes(item.Country)) &&
+          (selectedProductCat.length === 0 || selectedProductCat.includes(item.Product_Category))
+      );
 
-   // Membuat array labels dan datasets untuk chart
-  const countries = Object.keys(groupedData);
-  const categories = Object.keys(data.reduce((acc, cur) => { acc[cur.Product_Category] = true; return acc; }, {}));
+      // Group the filtered data
+      const groupedData = filteredData.reduce((acc, cur) => {
+          const key = cur.Country;
+          if (!acc[key]) {
+              acc[key] = {};
+          }
+          acc[key][cur.Product_Category] = cur.Revenue;
+          return acc;
+      }, {});
 
+      const countries = Object.keys(groupedData);
+      const categories = Object.keys(salesData.reduce((acc, cur) => { acc[cur.Product_Category] = true; return acc; }, {}));
 
-
-  // Menetapkan warna untuk setiap kategori
-  const categoryColors = {
-      "Bikes": "#006C80",
-      "Accessories": "#0093A7",
-      "Clothing": "#00C0CC"
-  };
-
-  const datasets = categories.map(category => {
-      return {
-          label: category,
-          data: countries.map(country => groupedData[country][category] || 0),
-          backgroundColor: categoryColors[category] || 'rgba(0, 0, 0, 0.1)', // Warna default jika kategori tidak ditemukan
-          stack: 'Stack 1'
+      const categoryColors = {
+          "Bikes": "#006C80",
+          "Accessories": "#0093A7",
+          "Clothing": "#00C0CC"
       };
-  });
 
-  // Membuat stacked bar chart menggunakan Chart.js
-  const ctx = document.getElementById('salesChart').getContext('2d');
-  const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-          labels: countries,
-          datasets: datasets
-      },
-      options: {
-          scales: {
-              x: { stacked: true },
-              y: {
-                  stacked: true,
-                  ticks: {
-                      callback: function(value, index, values) {
-                          if (value >= 1000000) {
-                              return (value / 1000000) + 'M';
-                          } else if (value >= 1000) {
-                              return (value / 1000) + 'K';
+      const datasets = categories.map(category => {
+          return {
+              label: category,
+              data: countries.map(country => groupedData[country] ? groupedData[country][category] || 0 : 0),
+              backgroundColor: categoryColors[category] || 'rgba(0, 0, 0, 0.1)',
+              stack: 'Stack 1'
+          };
+      });
+
+      if (chart) {
+          chart.destroy();
+      }
+
+      const ctx = document.getElementById('salesChart').getContext('2d');
+      chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: countries,
+              datasets: datasets
+          },
+          options: {
+              scales: {
+                  x: { stacked: true },
+                  y: {
+                      stacked: true,
+                      ticks: {
+                          callback: function (value, index, values) {
+                              if (value >= 1000000) {
+                                  return (value / 1000000) + 'M';
+                              } else if (value >= 1000) {
+                                  return (value / 1000) + 'K';
+                              }
+                              return value;
                           }
-                          return value;
                       }
                   }
               }
           }
-      }
-  });
-}
+      });
+  }
+});
