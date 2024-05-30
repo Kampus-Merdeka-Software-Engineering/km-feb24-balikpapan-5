@@ -379,6 +379,11 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
+.cards-wan .box-wan:hover {
+  background-color:#0093A7;
+  cursor: pointer;
+}
+
 .main-wan-title {
   display: flex;
   justify-content: space-between;
@@ -498,7 +503,7 @@ body {
 
 table {
   color: black;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .table-container {
@@ -508,7 +513,7 @@ table {
 
 .table-container h1 {
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   color: rgb(237, 76, 103);
   margin-top: 0;
   font-size: 24px;
@@ -526,10 +531,16 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: black; 
 }
-
+.dt-layout-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0x;
+  color: black; 
+}
 .dt-layout-cell {
   display: flex;
   align-items: center;
@@ -656,7 +667,7 @@ table {
 
 /* Medium <= 992px */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1280px) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 3fr;
@@ -683,7 +694,7 @@ table {
 /* Small <= 768px 
 diganti jd 936px */
 
-@media screen and (max-width: 936px) {
+@media screen and (max-width: 1000px) {
   .main-cards {
     grid-template-columns: 1fr;
     gap: 10px;
