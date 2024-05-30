@@ -24,8 +24,9 @@ function toggleCheckboxes(selectBoxId, checkboxesId) {
   
   toggleCheckboxes("selectBoxYear", "checkboxesYear");
   toggleCheckboxes("selectBoxCountry", "checkboxesCountry");
+  toggleCheckboxes("selectBoxAgeGroup", "checkboxesAgeGroup");
   toggleCheckboxes("selectBoxProductCategory", "checkboxesProductCategory");
-  toggleCheckboxes("selectBoxSubCategory", "checkboxesSubCategory");
+  // toggleCheckboxes("selectBoxSubCategory", "checkboxesSubCategory");
   toggleCheckboxes("selectBoxProduct", "checkboxesProduct");
   
 
