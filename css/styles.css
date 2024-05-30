@@ -37,6 +37,7 @@ body {
 
 .menu-icon {
   display: none;
+  cursor: pointer;
 }
 
 /* ---------- SIDEBAR ---------- */
@@ -102,6 +103,10 @@ body {
   z-index: 12 !important;
 }
 
+.material-icons-outlined{
+  cursor:pointer;
+}
+
 /* ---------- MAIN ---------- */
 
 .main-container {
@@ -120,12 +125,13 @@ body {
 .filtering-container {
   display: flex;
   justify-content: start;
-  gap: 25px;
+  gap: 75px;
   width: 100%;
 }
 
 .multiselect {
   position: relative;
+  cursor: pointer;
 }
 
 .overSelect {
@@ -141,8 +147,8 @@ body {
 }
 
 #selectBoxYear select {
-  height: 38px;
-  width:170px;
+  height: 42px;
+  width:180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -175,8 +181,8 @@ body {
 }
 
 #selectBoxCountry select {
-  height: 38px;
-  width:170px;
+  height: 42px;
+  width:180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -209,8 +215,8 @@ body {
 }
 
 #selectBoxAgeGroup select {
-  height: 38px;
-  width:170px;
+  height: 42px;
+  width:180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -243,8 +249,8 @@ body {
 }
 
 #selectBoxProductCategory select {
-  height: 38px;
-  width: 170px;
+  height: 42px;
+  width: 180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -277,8 +283,8 @@ body {
 }
 
 #selectBoxSubCategory select {
-  height: 38px;
-  width:170px;
+  height: 42px;
+  width:180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -313,8 +319,8 @@ body {
 }
 
 #selectBoxProduct select {
-  height: 38px;
-  width:170px;
+  height: 42px;
+  width:180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -710,7 +716,7 @@ diganti jd 936px */
   }
   .filtering-container{
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
   }
   .cards-wan {
     flex-direction: row;
