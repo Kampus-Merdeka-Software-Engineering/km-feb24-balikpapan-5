@@ -125,7 +125,7 @@ body {
 .filtering-container {
   display: flex;
   justify-content: start;
-  gap: 70px;
+  gap: 75px;
   width: 100%;
 }
 
@@ -147,7 +147,6 @@ body {
 }
 
 #selectBoxYear select {
-  margin-left: 15px;
   height: 42px;
   width:180px;
   border-radius: 7px;
@@ -709,7 +708,7 @@ diganti jd 936px */
   }
   .filtering-container{
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
   }
   .cards-wan {
     flex-direction: row;
