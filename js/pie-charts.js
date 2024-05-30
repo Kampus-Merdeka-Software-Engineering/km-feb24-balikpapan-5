@@ -1,3 +1,21 @@
+const checkboxesAgeGroup = document.getElementById("checkboxesAgeGroup");
+const AgeGroupInput = checkboxesAgeGroup.querySelectorAll("input[type=checkbox]");
+let selectedAgeGroup = [];
+
+for (let i = 0; i < AgeGroupInput.length; i++) {
+  AgeGroupInput[i].addEventListener("change", () => {
+    if (AgeGroupInput[i].checked) {
+        selectedAgeGroup.push(AgeGroupInput[i].value);
+    } else {
+        const index = selectedAgeGroup.indexOf(AgeGroupInput[i].value);
+        if (index > -1) {
+            selectedAgeGroup.splice(index, 1);
+        }
+    }
+    drawChart(); 
+  });
+}
+
 function drawChart() {
   fetch("../data/ageGroupDisributionData.json")
     .then((response) => response.json())
@@ -11,7 +29,11 @@ function drawChart() {
       for (let i = 0; i < response.length; i++) {
         let label = response[i].label;
         let value = response[i].value;
-        data.addRow([label, value]);
+
+        // Add filter based on SelectAgeGroup
+        if (selectedAgeGroup.length === 0 || selectedAgeGroup.includes(label)) {
+          data.addRow([label, value]);
+        }
       }
 
       let options = {
