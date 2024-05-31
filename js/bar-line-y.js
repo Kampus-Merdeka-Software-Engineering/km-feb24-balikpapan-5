@@ -71,7 +71,7 @@ const renderChart = (years, selectedCountries = []) => {
           beginAtZero: true,
           ticks: {
             callback: function (value) {
-              return value + " jt";
+              return value + " M";
             },
           },
         },
@@ -105,7 +105,7 @@ const renderChart = (years, selectedCountries = []) => {
           anchor: "end",
           align: "right",
           formatter: function (data, context) {
-            return data + "jt";
+            return data + "m";
           },
           color: "white",
           font: {
@@ -119,7 +119,8 @@ const renderChart = (years, selectedCountries = []) => {
 };
 
 // Add event listeners to checkboxes for years
-document.querySelectorAll("#checkboxesYear input[type=checkbox]")
+document
+  .querySelectorAll("#checkboxesYear input[type=checkbox]")
   .forEach((checkbox) => {
     checkbox.addEventListener("change", function () {
       const selectedYears = Array.from(
@@ -140,7 +141,8 @@ document.querySelectorAll("#checkboxesYear input[type=checkbox]")
     });
   });
 // Add event listeners to checkboxes for country
-document.querySelectorAll("#checkboxesCountry input[type=checkbox]")
+document
+  .querySelectorAll("#checkboxesCountry input[type=checkbox]")
   .forEach((checkbox) => {
     checkbox.addEventListener("change", function () {
       const selectedYears = Array.from(
