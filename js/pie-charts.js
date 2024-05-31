@@ -1,18 +1,20 @@
 const checkboxesAgeGroup = document.getElementById("checkboxesAgeGroup");
-const AgeGroupInput = checkboxesAgeGroup.querySelectorAll("input[type=checkbox]");
+const AgeGroupInput = checkboxesAgeGroup.querySelectorAll(
+  "input[type=checkbox]"
+);
 let selectedAgeGroup = [];
 
 for (let i = 0; i < AgeGroupInput.length; i++) {
   AgeGroupInput[i].addEventListener("change", () => {
     if (AgeGroupInput[i].checked) {
-        selectedAgeGroup.push(AgeGroupInput[i].value);
+      selectedAgeGroup.push(AgeGroupInput[i].value);
     } else {
-        const index = selectedAgeGroup.indexOf(AgeGroupInput[i].value);
-        if (index > -1) {
-            selectedAgeGroup.splice(index, 1);
-        }
+      const index = selectedAgeGroup.indexOf(AgeGroupInput[i].value);
+      if (index > -1) {
+        selectedAgeGroup.splice(index, 1);
+      }
     }
-    drawChart(); 
+    drawChart();
   });
 }
 
@@ -67,7 +69,18 @@ function drawChart() {
       );
 
       chart.draw(data, options);
+     //Transition onmouseover
+      google.visualization.events.addListener(chart, 'onmouseover', function(event) {
+      document.getElementById("pie-chart").style.transform = "scale(1.1)";
+      });
+      google.visualization.events.addListener(chart, 'onmouseout', function(event) {
+        document.getElementById("pie-chart").style.transform = "scale(1)";
+      });
+
+      chart.draw(data, options);
     });
+
+
 }
 
 google.charts.load("current", { packages: ["corechart"] });

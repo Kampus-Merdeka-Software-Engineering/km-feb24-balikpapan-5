@@ -1,7 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Filtering by Country
   const checkboxesCountry = document.getElementById("checkboxesCountry");
-  const countryInput = checkboxesCountry.querySelectorAll("input[type=checkbox]");
+  const countryInput = checkboxesCountry.querySelectorAll(
+    "input[type=checkbox]"
+  );
 
   let selectedCountry = [];
   for (let i = 0; i < countryInput.length; i++) {
@@ -19,8 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Filtering by ProductCategory
-  const checkboxesProductCat = document.getElementById("checkboxesProductCategory");
-  const productCatInput = checkboxesProductCat.querySelectorAll("input[type=checkbox]");
+  const checkboxesProductCat = document.getElementById(
+    "checkboxesProductCategory"
+  );
+  const productCatInput = checkboxesProductCat.querySelectorAll(
+    "input[type=checkbox]"
+  );
 
   let selectedProductCat = [];
   for (let i = 0; i < productCatInput.length; i++) {
@@ -40,28 +46,31 @@ document.addEventListener('DOMContentLoaded', function () {
   let chart;
   let salesData;
 
-  fetch('./data/SalesByproductCatandCountry.json')
-    .then(response => {
+  fetch("./data/SalesByproductCatandCountry.json")
+    .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
       return response.json();
     })
-    .then(data => {
+    .then((data) => {
       salesData = data;
       updateChart();
     })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
+    .catch((error) => {
+      console.error("There was a problem with the fetch operation:", error);
     });
 
   function updateChart() {
     if (!salesData) return;
 
     // Filter data based on selected countries and product categories
-    const filteredData = salesData.filter(item =>
-      (selectedCountry.length === 0 || selectedCountry.includes(item.Country)) &&
-      (selectedProductCat.length === 0 || selectedProductCat.includes(item.Product_Category))
+    const filteredData = salesData.filter(
+      (item) =>
+        (selectedCountry.length === 0 ||
+          selectedCountry.includes(item.Country)) &&
+        (selectedProductCat.length === 0 ||
+          selectedProductCat.includes(item.Product_Category))
     );
 
     // Group the filtered data
@@ -75,20 +84,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }, {});
 
     const countries = Object.keys(groupedData);
-    const categories = Object.keys(salesData.reduce((acc, cur) => { acc[cur.Product_Category] = true; return acc; }, {}));
+    const categories = Object.keys(
+      salesData.reduce((acc, cur) => {
+        acc[cur.Product_Category] = true;
+        return acc;
+      }, {})
+    );
 
     const categoryColors = {
-      "Bikes": "#006C80",
-      "Accessories": "#0093A7",
-      "Clothing": "#00C0CC"
+      Bikes: "#006C80",
+      Accessories: "#0093A7",
+      Clothing: "#00C0CC",
     };
 
-    const datasets = categories.map(category => {
+    const datasets = categories.map((category) => {
       return {
         label: category,
-        data: countries.map(country => groupedData[country] ? groupedData[country][category] || 0 : 0),
-        backgroundColor: categoryColors[category] || 'rgba(0, 0, 0, 0.1)',
-        stack: 'Stack 1'
+        data: countries.map((country) =>
+          groupedData[country] ? groupedData[country][category] || 0 : 0
+        ),
+        backgroundColor: categoryColors[category] || "rgba(0, 0, 0, 0.1)",
+        stack: "Stack 1",
       };
     });
 
@@ -96,32 +112,31 @@ document.addEventListener('DOMContentLoaded', function () {
       chart.destroy();
     }
 
-    const ctx = document.getElementById('salesChart').getContext('2d');
+    const ctx = document.getElementById("salesChart").getContext("2d");
     chart = new Chart(ctx, {
-      type: 'bar',
+      type: "bar",
       data: {
         labels: countries,
-        datasets: datasets
+        datasets: datasets,
       },
       options: {
         scales: {
-          x: { stacked: true,},
+          x: { stacked: true },
           y: {
             stacked: true,
             ticks: {
               callback: function (value, index, values) {
                 if (value >= 1000000) {
-                  return (value / 1000000) + 'M';
+                  return value / 1000000 + "M";
                 } else if (value >= 1000) {
-                  return (value / 1000) + 'K';
+                  return value / 1000 + "K";
                 }
                 return value;
-              }
-            }
-          }
-        }
-      }
+              },
+            },
+          },
+        },
+      },
     });
-  }  
+  }
 });
-  
