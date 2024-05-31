@@ -1,6 +1,13 @@
 {
   "2015": {
-    "labels": ["Australia", "Canada", "France", "Germany", "United Kingdom", "United States"],
+    "labels": [
+      "Australia",
+      "Canada",
+      "France",
+      "Germany",
+      "United Kingdom",
+      "United States"
+    ],
     "datasets": [
       {
         "label": "Female",
@@ -15,12 +22,18 @@
     ]
   },
   "2016": {
-    "labels": ["Australia", "Canada", "France", "Germany", "United Kingdom", "United States"],
+    "labels": [
+      "Australia",
+      "Canada",
+      "France",
+      "Germany",
+      "United Kingdom",
+      "United States"
+    ],
     "datasets": [
       {
         "label": "Female",
-        "data": [1353573, 612868, 744923, 839500, 914058
-        , 2116581],
+        "data": [1353573, 612868, 744923, 839500, 914058, 2116581],
         "backgroundColor": "#4DD0E1"
       },
       {

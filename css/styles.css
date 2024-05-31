@@ -432,13 +432,12 @@ body {
 }
 
 .cards-tree {
-  /* width: 100%; */
   padding: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #3f3f3f; */
 }
+
 .box-tree {
   width: 100%;
   display: flex;
@@ -447,10 +446,6 @@ body {
   padding: 5px;
   background-color: #31bacb;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 
 .box-tree p {
@@ -461,13 +456,8 @@ body {
 
 .box-pie-chart {
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   background-color: #ffffff;
 }
-
 .cards-line-wan {
   /* padding: 20px;
   background-color: aqua; */
