@@ -5,8 +5,9 @@ body {
   color: #9e9ea4;
   font-family: "Montserrat", sans-serif;
 }
-.main-title{
+.main-title {
   font-size: 27px;
+  margin-left: 10px;
 }
 .material-icons-outlined {
   vertical-align: middle;
@@ -103,8 +104,8 @@ body {
   z-index: 12 !important;
 }
 
-.material-icons-outlined{
-  cursor:pointer;
+.material-icons-outlined {
+  cursor: pointer;
 }
 
 /* ---------- MAIN ---------- */
@@ -126,6 +127,7 @@ body {
   display: flex;
   justify-content: start;
   gap: 75px;
+  margin-left: 10px;
   width: 100%;
 }
 
@@ -148,7 +150,7 @@ body {
 
 #selectBoxYear select {
   height: 42px;
-  width:180px;
+  width: 180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -182,7 +184,7 @@ body {
 
 #selectBoxCountry select {
   height: 42px;
-  width:180px;
+  width: 180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -216,7 +218,7 @@ body {
 
 #selectBoxAgeGroup select {
   height: 42px;
-  width:180px;
+  width: 180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -320,7 +322,7 @@ body {
 
 #selectBoxProduct select {
   height: 42px;
-  width:180px;
+  width: 180px;
   border-radius: 7px;
   color: #9e9ea4;
 }
@@ -332,8 +334,8 @@ body {
   position: absolute;
   background-color: white;
   width: 94%;
-  max-height: 200px; 
-  overflow-y: auto; 
+  max-height: 200px;
+  overflow-y: auto;
   border-radius: 4px;
   padding: 6px;
 }
@@ -369,7 +371,7 @@ body {
   font-size: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 .box-wan {
   background-color: #31bacb;
@@ -378,15 +380,15 @@ body {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  padding: 0.6rem;
+  padding: 1rem;
 }
 .box-title {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .cards-wan .box-wan:hover {
-  background-color:#0093A7;
+  background-color: #0093a7;
   cursor: pointer;
 }
 
@@ -395,11 +397,15 @@ body {
   justify-content: space-between;
   align-items: end;
   font-size: 20px;
+  gap: 15px;
 }
 
 .main-title-icon i {
-  font-size: 30px;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
 }
+
 .cards-tow {
   /* width: 100%; */
   padding: 0.6rem;
@@ -449,7 +455,7 @@ body {
 }
 
 .box-tree p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
 }
@@ -492,9 +498,9 @@ body {
 }
 
 .cards-line-tow {
-  border: 2px solid black; 
+  border: 2px solid black;
   border-radius: 5px;
-  padding: 15px; 
+  padding: 15px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -536,35 +542,35 @@ table {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  color: black; 
+  color: black;
 }
 .dt-layout-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0x;
-  color: black; 
+  color: black;
 }
 .dt-layout-cell {
   display: flex;
   align-items: center;
-  color: black; 
+  color: black;
 }
 
 .dt-start {
   justify-content: flex-start;
-  color: black; 
+  color: black;
 }
 
 .dt-end {
   justify-content: flex-end;
-  color: black; 
+  color: black;
 }
 
 .dt-length {
   display: flex;
   align-items: center;
-  color: black; 
+  color: black;
 }
 
 .dt-length select {
@@ -572,35 +578,31 @@ table {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: black; 
+  color: black;
 }
 
 .dt-length label {
   margin-left: 5px;
-  color: black; 
+  color: black;
 }
 
 .dt-search {
   display: flex;
   align-items: center;
-  color: black; 
+  color: black;
 }
 
 .dt-search label {
   margin-right: 10px;
-  color: black; 
+  color: black;
 }
 
 .dt-search input[type="search"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: black; 
+  color: black;
 }
-
-
-
-  
 
 /* 
 .main-title {
@@ -693,8 +695,6 @@ table {
   }
 }
 
-
-
 /* Small <= 768px 
 diganti jd 936px */
 
@@ -704,31 +704,34 @@ diganti jd 936px */
     gap: 10px;
     margin-bottom: 0;
   }
-  .filtering-container{
+  .filtering-container {
     flex-wrap: wrap;
     gap: 30px;
   }
   .cards-wan {
     flex-direction: row;
   }
-  .cards-tree{
+  .cards-tree {
     font-size: 2rem;
-  } 
+  }
   .box-wan {
-    padding: 0.6rem;
+    padding: 1rem;
     gap: 5px;
+    margin-right: 15px;
   }
   .box-title {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   /* .main-title-number{
     font-size: 0.6rem;
   } */
   .main-wan-title {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   .main-title-icon i {
-    font-size: 1rem;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
   }
   .main-line {
     grid-template-columns: 1fr;
@@ -750,8 +753,6 @@ diganti jd 936px */
   }
 }
 
-
-
 /* Extra Small <= 576px */
 
 @media screen and (max-width: 576px) {
@@ -762,9 +763,7 @@ diganti jd 936px */
     font-size: 0.4rem;
     top: 10px;
   }
-  .box-line-title{
+  .box-line-title {
     font-size: 0.6rem;
-
   }
-
 }
