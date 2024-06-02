@@ -10,6 +10,7 @@ fetch("../data/tabledata.json")
 
     // Inisialisasi ulang DataTable
     $('#data-table').DataTable({
+        "aaSorting": [],
         columns: [
             { title: 'Country' },
             { title: 'Product' },
