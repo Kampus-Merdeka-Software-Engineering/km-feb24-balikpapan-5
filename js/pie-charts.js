@@ -1,7 +1,5 @@
 const checkboxesAgeGroup = document.getElementById("checkboxesAgeGroup");
-const AgeGroupInput = checkboxesAgeGroup.querySelectorAll(
-  "input[type=checkbox]"
-);
+const AgeGroupInput = checkboxesAgeGroup.querySelectorAll("input[type=checkbox]");
 let selectedAgeGroup = [];
 
 for (let i = 0; i < AgeGroupInput.length; i++) {
@@ -32,7 +30,6 @@ function drawChart() {
         let label = response[i].label;
         let value = response[i].value;
 
-        // Add filter based on SelectAgeGroup
         if (selectedAgeGroup.length === 0 || selectedAgeGroup.includes(label)) {
           data.addRow([label, value]);
         }
@@ -64,23 +61,33 @@ function drawChart() {
         backgroundColor: "none",
       };
 
-      let chart = new google.visualization.PieChart(
-        document.getElementById("pie-chart")
-      );
+      let chart = new google.visualization.PieChart(document.getElementById("pie-chart"));
 
-      chart.draw(data, options);
-     //Transition onmouseover
-      google.visualization.events.addListener(chart, 'onmouseover', function(event) {
-      document.getElementById("pie-chart").style.transform = "scale(1.1)";
+      // Variabel untuk menyimpan warna asli
+      let originalColors = options.colors.slice();
+
+      // Event listener untuk 'select'
+      google.visualization.events.addListener(chart, 'select', function() {
+        let selection = chart.getSelection();
+        if (selection.length > 0) {
+          let selectedItem = selection[0].row;
+          let newColors = originalColors.map((color, index) => index === selectedItem ? color : "#E0E0E0");
+          options.colors = newColors;
+          chart.draw(data, options);
+
+          // Menghapus seleksi untuk memungkinkan klik pada bagian lain
+          setTimeout(() => chart.setSelection([]), 100);
+        }
       });
-      google.visualization.events.addListener(chart, 'onmouseout', function(event) {
-        document.getElementById("pie-chart").style.transform = "scale(1)";
+
+      // Event listener untuk 'onmouseout' - Mengembalikan warna asli
+      google.visualization.events.addListener(chart, 'onmouseout', function() {
+        options.colors = originalColors.slice();
+        chart.draw(data, options);
       });
 
       chart.draw(data, options);
     });
-
-
 }
 
 google.charts.load("current", { packages: ["corechart"] });
