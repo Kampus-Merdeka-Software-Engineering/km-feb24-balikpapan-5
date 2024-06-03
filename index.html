@@ -1,211 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Admin Dashboard</title>
-        <!-- Montserrat Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <!-- Material Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-        <!-- data table css -->
-        <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
-    </head>
-    <body>
-        <div class="grid-container">
-            <!-- Header -->
-            <header class="header">
-                <div class="menu-icon" onclick="openSidebar()">
-                    <span class="material-icons-outlined">menu</span>
-                </div>
-            </header>
-            <!-- End Header -->
-            <!-- Sidebar -->
-            <aside id="sidebar">
-                <div class="sidebar-title">
-                    <div class="sidebar-brand">
-                        <span class="material-icons-outlined">shopping_cart</span>
-                        Team 5
-                    </div>
-                    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
-                </div>
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-item">
-                        <a href="#" target="_blank">
-                            <span class="material-icons-outlined">dashboard</span>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item">
-                        <a href="#" target="_blank">
-                            <span class="material-icons-outlined">poll</span>
-                            Dataset
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item">
-                        <a href="#" target="_blank">
-                            <span class="material-icons-outlined">settings</span>
-                            Exit
-                        </a>
-                    </li>
-                </ul>
-            </aside>
-            <!-- End Sidebar -->
-            <!-- Main -->
-            <main class="main-container">
-                <div class="main-title">
-                    <h2>DASHBOARD</h2>
-                </div>
-                <div class="filtering-container">
-                    <div class="multiselect">
-                      <div class="selectBox" id="selectBoxYear">
-                        <select>
-                          <option>Select Year</option>
-                        </select>
-                        <div class="overSelect"></div>
-                      </div>
-                      <div id="checkboxesYear">
-                        <label for="2015">
-                          <input
-                            type="checkbox"
-                            id="2015"
-                            value="2015"
-                          />2015</label
-                        >
-                        <label for="2016">
-                          <input
-                            type="checkbox"
-                            id="2016"
-                            value="2016"
-                          />2016</label
-                        >
-                      </div>
-                    </div>
-                    <div class="multiselect">
-                        <div class="selectBox" id="selectBoxCountry">
-                          <select>
-                            <option>Select Country</option>
-                          </select>
-                          <div class="overSelect"></div>
-                        </div>
-                        <div id="checkboxesCountry">
-                          <label for="Australia">
-                            <input
-                              type="checkbox"
-                              id="Australia"
-                              value="Australia"
-                            />Australia</label
-                          >
-                          <label for="Canada">
-                            <input
-                              type="checkbox"
-                              id="Canada"
-                              value="Canada"
-                            />Canada</label
-                          >
-                          <label for="France">
-                            <input
-                              type="checkbox"
-                              id="France"
-                              value="France"
-                            />France</label
-                          >
-                          <label for="Germany">
-                            <input
-                              type="checkbox"
-                              id="Germany"
-                              value="Germany"
-                            />Germany</label
-                          >
-                          <label for="United Kingdom">
-                            <input
-                              type="checkbox"
-                              id="United Kingdom"
-                              value="United Kingdom"
-                            />United Kingdom</label
-                          >
-                          <label for="United States">
-                            <input
-                              type="checkbox"
-                              id="United States"
-                              value="United States"
-                            />United States</label
-                          >
-                        </div>
-                      </div>
-                      <div class="multiselect">
-                        <div class="selectBox" id="selectBoxAgeGroup">
-                          <select>
-                            <option>Select Age Group</option>
-                          </select>
-                          <div class="overSelect"></div>
-                        </div>
-                        <div id="checkboxesAgeGroup">
-                          <label for="Youth (<25)">
-                            <input
-                              type="checkbox"
-                              id="Youth (<25)"
-                              value="Youth (<25)"
-                            />Youth (<25)</label
-                          >
-                          <label for="Young Adults (25-34)">
-                            <input
-                              type="checkbox"
-                              id="Young Adults (25-34)"
-                              value="Young Adults (25-34)"
-                            />Young Adults (25-34)</label
-                          >
-                          <label for="Adults (35-64)">
-                            <input
-                              type="checkbox"
-                              id="Adults (35-64)"
-                              value="Adults (35-64)"
-                            />Adults (35-64)</label
-                          >
-                          <label for="Seniors (64+)">
-                            <input
-                              type="checkbox"
-                              id="Seniors (64+)"
-                              value="Seniors (64+)"
-                            />Seniors (64+)</label
-                          >
-                        </div>
-                      </div>
-                      <div class="multiselect">
-                        <div class="selectBox" id="selectBoxProductCategory">
-                          <select>
-                            <option>Select Product Category</option>
-                          </select>
-                          <div class="overSelect"></div>
-                        </div>
-                        <div id="checkboxesProductCategory">
-                          <label for="Accessories">
-                            <input
-                              type="checkbox"
-                              id="Accessories"
-                              value="Accessories"
-                            />Accessories</label
-                          >
-                          <label for="Bikes">
-                            <input
-                              type="checkbox"
-                              id="Bikes"
-                              value="Bikes"
-                            />Bikes</label
-                          >
-                          <label for="Clothing">
-                            <input
-                              type="checkbox"
-                              id="Clothing"
-                              value="Clothing"
-                            />Clothing</label
-                          >
-                        </div>
-                      </div>
-                      <!-- <div class="multiselect">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- data table css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+      </header>
+      <!-- End Header -->
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">shopping_cart</span>
+            Team 5
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span>
+              Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">poll</span>
+              Dataset
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span>
+              Exit
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>DASHBOARD</h2>
+        </div>
+        <div class="filtering-container">
+          <div class="multiselect">
+            <div class="selectBox" id="selectBoxYear">
+              <select>
+                <option>Select Year</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxesYear">
+              <label for="2015">
+                <input type="checkbox" id="2015" value="2015" />2015</label
+              >
+              <label for="2016">
+                <input type="checkbox" id="2016" value="2016" />2016</label
+              >
+            </div>
+          </div>
+          <div class="multiselect">
+            <div class="selectBox" id="selectBoxCountry">
+              <select>
+                <option>Select Country</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxesCountry">
+              <label for="Australia">
+                <input
+                  type="checkbox"
+                  id="Australia"
+                  value="Australia"
+                />Australia</label
+              >
+              <label for="Canada">
+                <input
+                  type="checkbox"
+                  id="Canada"
+                  value="Canada"
+                />Canada</label
+              >
+              <label for="France">
+                <input
+                  type="checkbox"
+                  id="France"
+                  value="France"
+                />France</label
+              >
+              <label for="Germany">
+                <input
+                  type="checkbox"
+                  id="Germany"
+                  value="Germany"
+                />Germany</label
+              >
+              <label for="United Kingdom">
+                <input
+                  type="checkbox"
+                  id="United Kingdom"
+                  value="United Kingdom"
+                />United Kingdom</label
+              >
+              <label for="United States">
+                <input
+                  type="checkbox"
+                  id="United States"
+                  value="United States"
+                />United States</label
+              >
+            </div>
+          </div>
+          <div class="multiselect">
+            <div class="selectBox" id="selectBoxAgeGroup">
+              <select>
+                <option>Select Age Group</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxesAgeGroup">
+              <label for="Youth (<25)">
+                <input
+                  type="checkbox"
+                  id="Youth (<25)"
+                  value="Youth (<25)"
+                />Youth (<25)</label
+              >
+              <label for="Young Adults (25-34)">
+                <input
+                  type="checkbox"
+                  id="Young Adults (25-34)"
+                  value="Young Adults (25-34)"
+                />Young Adults (25-34)</label
+              >
+              <label for="Adults (35-64)">
+                <input
+                  type="checkbox"
+                  id="Adults (35-64)"
+                  value="Adults (35-64)"
+                />Adults (35-64)</label
+              >
+              <label for="Seniors (64+)">
+                <input
+                  type="checkbox"
+                  id="Seniors (64+)"
+                  value="Seniors (64+)"
+                />Seniors (64+)</label
+              >
+            </div>
+          </div>
+          <div class="multiselect">
+            <div class="selectBox" id="selectBoxProductCategory">
+              <select>
+                <option>Select Product Category</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxesProductCategory">
+              <label for="Accessories">
+                <input
+                  type="checkbox"
+                  id="Accessories"
+                  value="Accessories"
+                />Accessories</label
+              >
+              <label for="Bikes">
+                <input type="checkbox" id="Bikes" value="Bikes" />Bikes</label
+              >
+              <label for="Clothing">
+                <input
+                  type="checkbox"
+                  id="Clothing"
+                  value="Clothing"
+                />Clothing</label
+              >
+            </div>
+          </div>
+          <!-- <div class="multiselect">
                         <div class="selectBox" id="selectBoxSubCategory">
                           <select>
                             <option>Select SubCategory</option>
@@ -334,1023 +336,1029 @@
                           >
                         </div>
                       </div> -->
-                      <div class="multiselect">
-                        <div class="selectBox" id="selectBoxProduct">
-                          <select>
-                            <option>Select Product</option>
-                          </select>
-                          <div class="overSelect"></div>
-                        </div>
-                        <div id="checkboxesProduct">
-                          <label for="All-Purpose Bike Stand">
-                            <input
-                              type="checkbox"
-                              id="All-Purpose Bike Stand"
-                              value="All-Purpose Bike Stand"
-                            />All-Purpose Bike Stand</label
-                          >
-                          <label for="AWC Logo Cap">
-                              <input
-                                type="checkbox"
-                                id="AWC Logo Cap"
-                                value="AWC Logo Cap"
-                              />AWC Logo Cap</label
-                          >
-                          <label for="Bike Wash - Dissolver">
-                              <input
-                                type="checkbox"
-                                id="Bike Wash - Dissolver"
-                                value="Bike Wash - Dissolver"
-                              />Bike Wash - Dissolver</label
-                          >
-                          <label for="Classic Vest, L">
-                              <input
-                                type="checkbox"
-                                id="Classic Vest, L"
-                                value="Classic Vest, L"
-                              />Classic Vest, L</label
-                          >
-                          <label for="Classic Vest, M">
-                              <input
-                                type="checkbox"
-                                id="Classic Vest, M"
-                                value="Classic Vest, M"
-                              />Classic Vest, M</label
-                          >
-                          <label for="Classic Vest, S">
-                              <input
-                                type="checkbox"
-                                id="Classic Vest, S"
-                                value="Classic Vest, S"
-                              />Classic Vest, S</label
-                          >
-                          <label for="Fender Set - Mountain">
-                              <input
-                                type="checkbox"
-                                id="Fender Set - Mountain"
-                                value="Fender Set - Mountain"
-                              />Fender Set - Mountain</label
-                          >
-                          <label for="Half-Finger Gloves, L">
-                              <input
-                                type="checkbox"
-                                id="Half-Finger Gloves, L"
-                                value="Half-Finger Gloves, L"
-                              />Half-Finger Gloves, L</label
-                          >
-                          <label for="Half-Finger Gloves, M">
-                              <input
-                                type="checkbox"
-                                id="Half-Finger Gloves, M"
-                                value="Half-Finger Gloves, M"
-                              />Half-Finger Gloves, M</label
-                          >
-                          <label for="Half-Finger Gloves, S">
-                              <input
-                                type="checkbox"
-                                id="Half-Finger Gloves, S"
-                                value="Half-Finger Gloves, S"
-                              />Half-Finger Gloves, S</label
-                          >
-                          <label for="Hitch Rack - 4-Bike">
-                              <input
-                                type="checkbox"
-                                id="Hitch Rack - 4-Bike"
-                                value="Hitch Rack - 4-Bike"
-                              />Hitch Rack - 4-Bike</label
-                          >
-                          <label for="HL Mountain Tire">
-                              <input
-                                type="checkbox"
-                                id="HL Mountain Tire"
-                                value="HL Mountain Tire"
-                              />HL Mountain Tire</label
-                          >
-                          <label for="HL Road Tire">
-                              <input
-                                type="checkbox"
-                                id="HL Road Tire"
-                                value="HL Road Tire"
-                              />HL Road Tire</label
-                          >
-                          <label for="Hydration Pack - 70 oz.">
-                              <input
-                                type="checkbox"
-                                id="Hydration Pack - 70 oz."
-                                value="Hydration Pack - 70 oz."
-                              />Hydration Pack - 70 oz.</label
-                          >
-                          <label for="LL Mountain Tire">
-                              <input
-                                type="checkbox"
-                                id="LL Mountain Tire"
-                                value="LL Mountain Tire"
-                              />LL Mountain Tire</label
-                          >
-                          <label for="LL Road Tire">
-                              <input
-                                type="checkbox"
-                                id="LL Road Tire"
-                                value="LL Road Tire"
-                              />LL Road Tire</label
-                          >
-                          <label for="Long-Sleeve Logo Jersey, L">
-                              <input
-                                type="checkbox"
-                                id="Long-Sleeve Logo Jersey, L"
-                                value="Long-Sleeve Logo Jersey, L"
-                              />Long-Sleeve Logo Jersey, L</label
-                          >
-                          <label for="Long-Sleeve Logo Jersey, M">
-                              <input
-                                type="checkbox"
-                                id="Long-Sleeve Logo Jersey, M"
-                                value="Long-Sleeve Logo Jersey, M"
-                              />Long-Sleeve Logo Jersey, M</label
-                          >
-                          <label for="Long-Sleeve Logo Jersey, S">
-                              <input
-                                type="checkbox"
-                                id="Long-Sleeve Logo Jersey, S"
-                                value="Long-Sleeve Logo Jersey, S"
-                              />Long-Sleeve Logo Jersey, S</label
-                          >
-                          <label for="Long-Sleeve Logo Jersey, XL">
-                              <input
-                                type="checkbox"
-                                id="Long-Sleeve Logo Jersey, XL"
-                                value="Long-Sleeve Logo Jersey, XL"
-                              />Long-Sleeve Logo Jersey, XL</label
-                          >
-                          <label for="ML Mountain Tire">
-                              <input
-                                type="checkbox"
-                                id="ML Mountain Tire"
-                                value="ML Mountain Tire"
-                              />ML Mountain Tire</label
-                          >
-                          <label for="ML Road Tire">
-                              <input
-                                type="checkbox"
-                                id="ML Road Tire"
-                                value="ML Road Tire"
-                              />ML Road Tire</label
-                          >
-                          <label for="Mountain Bottle Cage">
-                              <input
-                                type="checkbox"
-                                id="Mountain Bottle Cage"
-                                value="Mountain Bottle Cage"
-                              />Mountain Bottle Cage</label
-                          >
-                          <label for="Mountain Tire Tube">
-                              <input
-                                type="checkbox"
-                                id="Mountain Tire Tube"
-                                value="Mountain Tire Tube"
-                              />Mountain Tire Tube</label
-                          >
-                          <label for="Mountain-100 Black, 38">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Black, 38"
-                                value="Mountain-100 Black, 38"
-                              />Mountain-100 Black, 38</label
-                          >
-                          <label for="Mountain-100 Black, 42">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Black, 42"
-                                value="Mountain-100 Black, 42"
-                              />Mountain-100 Black, 42</label
-                          >
-                          <label for="Mountain-100 Black, 44">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Black, 44"
-                                value="Mountain-100 Black, 44"
-                              />Mountain-100 Black, 44</label
-                          >
-                          <label for="Mountain-100 Black, 48">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Black, 48"
-                                value="Mountain-100 Black, 48"
-                              />Mountain-100 Black, 48</label
-                          >
-                          <label for="Mountain-100 Silver, 38">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Silver, 38"
-                                value="Mountain-100 Silver, 38"
-                              />Mountain-100 Silver, 38</label
-                          >
-                          <label for="Mountain-100 Silver, 42">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Silver, 42"
-                                value="Mountain-100 Silver, 42"
-                              />Mountain-100 Silver, 42</label
-                          >
-                          <label for="Mountain-100 Silver, 44">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Silver, 44"
-                                value="Mountain-100 Silver, 44"
-                              />Mountain-100 Silver, 44</label
-                          >
-                          <label for="Mountain-100 Silver, 48">
-                              <input
-                                type="checkbox"
-                                id="Mountain-100 Silver, 48"
-                                value="Mountain-100 Silver, 48"
-                              />Mountain-100 Silver, 48</label
-                          >
-                          <label for="Mountain-200 Black, 38">
-                              <input
-                                type="checkbox"
-                                id="Mountain-200 Black, 38"
-                                value="Mountain-200 Black, 38"
-                              />Mountain-200 Black, 38</label
-                          >
-                          <label for="Mountain-200 Black, 42">
-                              <input
-                                type="checkbox"
-                                id="Mountain-200 Black, 42"
-                                value="Mountain-200 Black, 42"
-                              />Mountain-200 Black, 42</label
-                          >
-                          <label for="Mountain-200 Black, 46">
-                              <input
-                                type="checkbox"
-                                id="Mountain-200 Black, 46"
-                                value="Mountain-200 Black, 46"
-                              />Mountain-200 Black, 46</label
-                          >
-                          <label for="Mountain-200 Silver, 38">
-                              <input
-                                type="checkbox"
-                                id="Mountain-200 Silver, 38"
-                                value="Mountain-200 Silver, 38"
-                              />Mountain-200 Silver, 38</label
-                          >
-                          <label for="Mountain-200 Silver, 42">
-                              <input
-                                type="checkbox"
-                                id="Mountain-200 Silver, 42"
-                                value="Mountain-200 Silver, 42"
-                              />Mountain-200 Silver, 42</label
-                          >
-                          <label for="Mountain-200 Silver, 46">
-                              <input
-                                type="checkbox"
-                                id="Mountain-200 Silver, 46"
-                                value="Mountain-200 Silver, 46"
-                              />Mountain-200 Silver, 46</label
-                          >
-                          <label for="Mountain-400-W Silver, 38">
-                              <input
-                                type="checkbox"
-                                id="Mountain-400-W Silver, 38"
-                                value="Mountain-400-W Silver, 38"
-                              />Mountain-400-W Silver, 38</label
-                          >
-                          <label for="Mountain-400-W Silver, 40">
-                              <input
-                                type="checkbox"
-                                id="Mountain-400-W Silver, 40"
-                                value="Mountain-400-W Silver, 40"
-                              />Mountain-400-W Silver, 40</label
-                          >
-                          <label for="Mountain-400-W Silver, 42">
-                              <input
-                                type="checkbox"
-                                id="Mountain-400-W Silver, 42"
-                                value="Mountain-400-W Silver, 42"
-                              />Mountain-400-W Silver, 42</label
-                          >
-                          <label for="Mountain-400-W Silver, 46">
-                              <input
-                                type="checkbox"
-                                id="Mountain-400-W Silver, 46"
-                                value="Mountain-400-W Silver, 46"
-                              />Mountain-400-W Silver, 46</label
-                          >
-                          <label for="Mountain-500 Black, 40">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Black, 40"
-                                value="Mountain-500 Black, 40"
-                              />Mountain-500 Black, 40</label
-                          >
-                          <label for="Mountain-500 Black, 42">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Black, 42"
-                                value="Mountain-500 Black, 42"
-                              />Mountain-500 Black, 42</label
-                          >
-                          <label for="Mountain-500 Black, 44">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Black, 44"
-                                value="Mountain-500 Black, 44"
-                              />Mountain-500 Black, 44</label
-                          >
-                          <label for="Mountain-500 Black, 48">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Black, 48"
-                                value="Mountain-500 Black, 48"
-                              />Mountain-500 Black, 48</label
-                          >
-                          <label for="Mountain-500 Black, 52">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Black, 52"
-                                value="Mountain-500 Black, 52"
-                              />Mountain-500 Black, 52</label
-                          >
-                          <label for="Mountain-500 Silver, 40">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Silver, 40"
-                                value="Mountain-500 Silver, 40"
-                              />Mountain-500 Silver, 40</label
-                          >
-                          <label for="Mountain-500 Silver, 42">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Silver, 42"
-                                value="Mountain-500 Silver, 42"
-                              />Mountain-500 Silver, 42</label
-                          >
-                          <label for="Mountain-500 Silver, 44">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Silver, 44"
-                                value="Mountain-500 Silver, 44"
-                              />Mountain-500 Silver, 44</label
-                          >
-                          <label for="Mountain-500 Silver, 48">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Silver, 48"
-                                value="Mountain-500 Silver, 48"
-                              />Mountain-500 Silver, 48</label
-                          >
-                          <label for="Mountain-500 Silver, 52">
-                              <input
-                                type="checkbox"
-                                id="Mountain-500 Silver, 52"
-                                value="Mountain-500 Silver, 52"
-                              />Mountain-500 Silver, 52</label
-                          >
-                          <label for="Patch Kit/8 Patches">
-                              <input
-                                type="checkbox"
-                                id="Patch Kit/8 Patches"
-                                value="Patch Kit/8 Patches"
-                              />Patch Kit/8 Patches</label
-                          >
-                          <label for="Racing Socks, L">
-                              <input
-                                type="checkbox"
-                                id="Racing Socks, L"
-                                value="Racing Socks, L"
-                              />Racing Socks, L</label
-                          >
-                          <label for="Racing Socks, M">
-                              <input
-                                type="checkbox"
-                                id="Racing Socks, M"
-                                value="Racing Socks, M"
-                              />Racing Socks, M</label
-                          >
-                          <label for="Road Bottle Cage">
-                              <input
-                                type="checkbox"
-                                id="Road Bottle Cage"
-                                value="Road Bottle Cage"
-                              />Road Bottle Cage</label
-                          >
-                          <label for="Road Tire Tube">
-                              <input
-                                type="checkbox"
-                                id="Road Tire Tube"
-                                value="Road Tire Tube"
-                              />Road Tire Tube</label
-                          >
-                          <label for="Road-150 Red, 44">
-                              <input
-                                type="checkbox"
-                                id="Road-150 Red, 44"
-                                value="Road-150 Red, 44"
-                              />Road-150 Red, 44</label
-                          >
-                          <label for="Road-150 Red, 48">
-                              <input
-                                type="checkbox"
-                                id="Road-150 Red, 48"
-                                value="Road-150 Red, 48"
-                              />Road-150 Red, 48</label
-                          >
-                          <label for="Road-150 Red, 52">
-                              <input
-                                type="checkbox"
-                                id="Road-150 Red, 52"
-                                value="Road-150 Red, 52"
-                              />Road-150 Red, 52</label
-                          >
-                          <label for="Road-150 Red, 56">
-                              <input
-                                type="checkbox"
-                                id="Road-150 Red, 56"
-                                value="Road-150 Red, 56"
-                              />Road-150 Red, 56</label
-                          >
-                          <label for="Road-150 Red, 62">
-                              <input
-                                type="checkbox"
-                                id="Road-150 Red, 62"
-                                value="Road-150 Red, 62"
-                              />Road-150 Red, 62</label
-                          >
-                          <label for="Road-250 Black, 44">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Black, 44"
-                                value="Road-250 Black, 44"
-                              />Road-250 Black, 44</label
-                          >
-                          <label for="Road-250 Black, 48">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Black, 48"
-                                value="Road-250 Black, 48"
-                              />Road-250 Black, 48</label
-                          >
-                          <label for="Road-250 Black, 52">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Black, 52"
-                                value="Road-250 Black, 52"
-                              />Road-250 Black, 52</label
-                          >
-                          <label for="Road-250 Black, 58">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Black, 58"
-                                value="Road-250 Black, 58"
-                              />Road-250 Black, 58</label
-                          >
-                          <label for="Road-250 Red, 44">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Red, 44"
-                                value="Road-250 Red, 44"
-                              />Road-250 Red, 44</label
-                          >
-                          <label for="Road-250 Red, 48">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Red, 48"
-                                value="Road-250 Red, 48"
-                              />Road-250 Red, 48</label
-                          >
-                          <label for="Road-250 Red, 52">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Red, 52"
-                                value="Road-250 Red, 52"
-                              />Road-250 Red, 52</label
-                          >
-                          <label for="Road-250 Red, 58">
-                              <input
-                                type="checkbox"
-                                id="Road-250 Red, 58"
-                                value="Road-250 Red, 58"
-                              />Road-250 Red, 58</label
-                          >
-                          <label for="Road-350-W Yellow, 40">
-                              <input
-                                type="checkbox"
-                                id="Road-350-W Yellow, 40"
-                                value="Road-350-W Yellow, 40"
-                              />Road-350-W Yellow, 40</label
-                          >
-                          <label for="Road-350-W Yellow, 42">
-                              <input
-                                type="checkbox"
-                                id="Road-350-W Yellow, 42"
-                                value="Road-350-W Yellow, 42"
-                              />Road-350-W Yellow, 42</label
-                          >
-                          <label for="Road-350-W Yellow, 44">
-                              <input
-                                type="checkbox"
-                                id="Road-350-W Yellow, 44"
-                                value="Road-350-W Yellow, 44"
-                              />Road-350-W Yellow, 44</label
-                          >
-                          <label for="Road-350-W Yellow, 48">
-                            <input
-                                type="checkbox"
-                                id="Road-350-W Yellow, 48"
-                                value="Road-350-W Yellow, 48"
-                            />Road-350-W Yellow, 48</label
-                        >
-                        <label for="Road-550-W Yellow, 38">
-                            <input
-                                type="checkbox"
-                                id="Road-550-W Yellow, 38"
-                                value="Road-550-W Yellow, 38"
-                            />Road-550-W Yellow, 38</label
-                        >
-                        <label for="Road-550-W Yellow, 40">
-                            <input
-                                type="checkbox"
-                                id="Road-550-W Yellow, 40"
-                                value="Road-550-W Yellow, 40"
-                            />Road-550-W Yellow, 40</label
-                        >
-                        <label for="Road-550-W Yellow, 42">
-                            <input
-                                type="checkbox"
-                                id="Road-550-W Yellow, 42"
-                                value="Road-550-W Yellow, 42"
-                            />Road-550-W Yellow, 42</label
-                        >
-                        <label for="Road-550-W Yellow, 44">
-                            <input
-                                type="checkbox"
-                                id="Road-550-W Yellow, 44"
-                                value="Road-550-W Yellow, 44"
-                            />Road-550-W Yellow, 44</label
-                        >
-                        <label for="Road-550-W Yellow, 48">
-                            <input
-                                type="checkbox"
-                                id="Road-550-W Yellow, 48"
-                                value="Road-550-W Yellow, 48"
-                            />Road-550-W Yellow, 48</label
-                        >
-                        <label for="Road-650 Black, 44">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Black, 44"
-                                value="Road-650 Black, 44"
-                            />Road-650 Black, 44</label
-                        >
-                        <label for="Road-650 Black, 48">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Black, 48"
-                                value="Road-650 Black, 48"
-                            />Road-650 Black, 48</label
-                        >
-                        <label for="Road-650 Black, 52">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Black, 52"
-                                value="Road-650 Black, 52"
-                            />Road-650 Black, 52</label
-                        >
-                        <label for="Road-650 Black, 58">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Black, 58"
-                                value="Road-650 Black, 58"
-                            />Road-650 Black, 58</label
-                        >
-                        <label for="Road-650 Black, 60">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Black, 60"
-                                value="Road-650 Black, 60"
-                            />Road-650 Black, 60</label
-                        >
-                        <label for="Road-650 Black, 62">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Black, 62"
-                                value="Road-650 Black, 62"
-                            />Road-650 Black, 62</label
-                        >
-                        <label for="Road-650 Red, 44">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Red, 44"
-                                value="Road-650 Red, 44"
-                            />Road-650 Red, 44</label
-                        >
-                        <label for="Road-650 Red, 48">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Red, 48"
-                                value="Road-650 Red, 48"
-                            />Road-650 Red, 48</label
-                        >
-                        <label for="Road-650 Red, 52">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Red, 52"
-                                value="Road-650 Red, 52"
-                            />Road-650 Red, 52</label
-                        >
-                        <label for="Road-650 Red, 58">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Red, 58"
-                                value="Road-650 Red, 58"
-                            />Road-650 Red, 58</label
-                        >
-                        <label for="Road-650 Red, 60">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Red, 60"
-                                value="Road-650 Red, 60"
-                            />Road-650 Red, 60</label
-                        >
-                        <label for="Road-650 Red, 62">
-                            <input
-                                type="checkbox"
-                                id="Road-650 Red, 62"
-                                value="Road-650 Red, 62"
-                            />Road-650 Red, 62</label
-                        >
-                        <label for="Road-750 Black, 44">
-                            <input
-                                type="checkbox"
-                                id="Road-750 Black, 44"
-                                value="Road-750 Black, 44"
-                            />Road-750 Black, 44</label
-                        >
-                        <label for="Road-750 Black, 48">
-                            <input
-                                type="checkbox"
-                                id="Road-750 Black, 48"
-                                value="Road-750 Black, 48"
-                            />Road-750 Black, 48</label
-                        >
-                        <label for="Road-750 Black, 52">
-                            <input
-                                type="checkbox"
-                                id="Road-750 Black, 52"
-                                value="Road-750 Black, 52"
-                            />Road-750 Black, 52</label
-                        >
-                        <label for="Road-750 Black, 58">
-                            <input
-                                type="checkbox"
-                                id="Road-750 Black, 58"
-                                value="Road-750 Black, 58"
-                            />Road-750 Black, 58</label
-                        >
-                        <label for="Short-Sleeve Classic Jersey, L">
-                            <input
-                                type="checkbox"
-                                id="Short-Sleeve Classic Jersey, L"
-                                value="Short-Sleeve Classic Jersey, L"
-                            />Short-Sleeve Classic Jersey, L</label
-                        >
-                        <label for="Short-Sleeve Classic Jersey, M">
-                            <input
-                                type="checkbox"
-                                id="Short-Sleeve Classic Jersey, M"
-                                value="Short-Sleeve Classic Jersey, M"
-                            />Short-Sleeve Classic Jersey, M</label
-                        >
-                        <label for="Short-Sleeve Classic Jersey, S">
-                            <input
-                                type="checkbox"
-                                id="Short-Sleeve Classic Jersey, S"
-                                value="Short-Sleeve Classic Jersey, S"
-                            />Short-Sleeve Classic Jersey, S</label
-                        >
-                        <label for="Short-Sleeve Classic Jersey, XL">
-                            <input
-                                type="checkbox"
-                                id="Short-Sleeve Classic Jersey, XL"
-                                value="Short-Sleeve Classic Jersey, XL"
-                            />Short-Sleeve Classic Jersey, XL</label
-                        >
-                        <label for="Sport-100 Helmet, Black">
-                            <input
-                                type="checkbox"
-                                id="Sport-100 Helmet, Black"
-                                value="Sport-100 Helmet, Black"
-                            />Sport-100 Helmet, Black</label
-                        >
-                        <label for="Sport-100 Helmet, Blue">
-                            <input
-                                type="checkbox"
-                                id="Sport-100 Helmet, Blue"
-                                value="Sport-100 Helmet, Blue"
-                            />Sport-100 Helmet, Blue</label
-                        >
-                        <label for="Sport-100 Helmet, Red">
-                            <input
-                                type="checkbox"
-                                id="Sport-100 Helmet, Red"
-                                value="Sport-100 Helmet, Red"
-                            />Sport-100 Helmet, Red</label
-                        >
-                        <label for="Touring Tire">
-                            <input
-                                type="checkbox"
-                                id="Touring Tire"
-                                value="Touring Tire"
-                            />Touring Tire</label
-                        >
-                        <label for="Touring Tire Tube">
-                            <input
-                                type="checkbox"
-                                id="Touring Tire Tube"
-                                value="Touring Tire Tube"
-                            />Touring Tire Tube</label
-                        >
-                        <label for="Touring-1000 Blue, 46">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Blue, 46"
-                                value="Touring-1000 Blue, 46"
-                            />Touring-1000 Blue, 46</label
-                        >
-                        <label for="Touring-1000 Blue, 50">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Blue, 50"
-                                value="Touring-1000 Blue, 50"
-                            />Touring-1000 Blue, 50</label
-                        >
-                        <label for="Touring-1000 Blue, 54">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Blue, 54"
-                                value="Touring-1000 Blue, 54"
-                            />Touring-1000 Blue, 54</label
-                        >
-                        <label for="Touring-1000 Blue, 60">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Blue, 60"
-                                value="Touring-1000 Blue, 60"
-                            />Touring-1000 Blue, 60</label
-                        >
-                        <label for="Touring-1000 Yellow, 46">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Yellow, 46"
-                                value="Touring-1000 Yellow, 46"
-                            />Touring-1000 Yellow, 46</label
-                        >
-                        <label for="Touring-1000 Yellow, 50">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Yellow, 50"
-                                value="Touring-1000 Yellow, 50"
-                            />Touring-1000 Yellow, 50</label
-                        >
-                        <label for="Touring-1000 Yellow, 54">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Yellow, 54"
-                                value="Touring-1000 Yellow, 54"
-                            />Touring-1000 Yellow, 54</label
-                        >
-                        <label for="Touring-1000 Yellow, 60">
-                            <input
-                                type="checkbox"
-                                id="Touring-1000 Yellow, 60"
-                                value="Touring-1000 Yellow, 60"
-                            />Touring-1000 Yellow, 60</label
-                        >
-                        <label for="Touring-2000 Blue, 46">
-                            <input
-                                type="checkbox"
-                                id="Touring-2000 Blue, 46"
-                                value="Touring-2000 Blue, 46"
-                            />Touring-2000 Blue, 46</label
-                        >
-                        <label for="Touring-2000 Blue, 50">
-                            <input
-                                type="checkbox"
-                                id="Touring-2000 Blue, 50"
-                                value="Touring-2000 Blue, 50"
-                            />Touring-2000 Blue, 50</label
-                        >
-                        <label for="Touring-2000 Blue, 54">
-                            <input
-                                type="checkbox"
-                                id="Touring-2000 Blue, 54"
-                                value="Touring-2000 Blue, 54"
-                            />Touring-2000 Blue, 54</label
-                        >
-                        <label for="Touring-2000 Blue, 60">
-                            <input
-                                type="checkbox"
-                                id="Touring-2000 Blue, 60"
-                                value="Touring-2000 Blue, 60"
-                            />Touring-2000 Blue, 60</label
-                        >
-                        <label for="Touring-3000 Blue, 44">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Blue, 44"
-                                value="Touring-3000 Blue, 44"
-                            />Touring-3000 Blue, 44</label
-                        >
-                        <label for="Touring-3000 Blue, 50">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Blue, 50"
-                                value="Touring-3000 Blue, 50"
-                            />Touring-3000 Blue, 50</label
-                        >
-                        <label for="Touring-3000 Blue, 54">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Blue, 54"
-                                value="Touring-3000 Blue, 54"
-                            />Touring-3000 Blue, 54</label
-                        >
-                        <label for="Touring-3000 Blue, 58">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Blue, 58"
-                                value="Touring-3000 Blue, 58"
-                            />Touring-3000 Blue, 58</label
-                        >
-                        <label for="Touring-3000 Blue, 62">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Blue, 62"
-                                value="Touring-3000 Blue, 62"
-                            />Touring-3000 Blue, 62</label
-                        >
-                        <label for="Touring-3000 Yellow, 44">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Yellow, 44"
-                                value="Touring-3000 Yellow, 44"
-                            />Touring-3000 Yellow, 44</label
-                        >
-                        <label for="Touring-3000 Yellow, 50">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Yellow, 50"
-                                value="Touring-3000 Yellow, 50"
-                            />Touring-3000 Yellow, 50</label
-                        >
-                        <label for="Touring-3000 Yellow, 54">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Yellow, 54"
-                                value="Touring-3000 Yellow, 54"
-                            />Touring-3000 Yellow, 54</label
-                        >
-                        <label for="Touring-3000 Yellow, 58">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Yellow, 58"
-                                value="Touring-3000 Yellow, 58"
-                            />Touring-3000 Yellow, 58</label
-                        >
-                        <label for="Touring-3000 Yellow, 62">
-                            <input
-                                type="checkbox"
-                                id="Touring-3000 Yellow, 62"
-                                value="Touring-3000 Yellow, 62"
-                            />Touring-3000 Yellow, 62</label
-                        >
-                        <label for="Water Bottle - 30 oz.">
-                            <input
-                                type="checkbox"
-                                id="Water Bottle - 30 oz."
-                                value="Water Bottle - 30 oz."
-                            />Water Bottle - 30 oz.</label
-                        >
-                        <label for="Women's Mountain Shorts, L">
-                            <input
-                                type="checkbox"
-                                id="Women's Mountain Shorts, L"
-                                value="Women's Mountain Shorts, L"
-                            />Women's Mountain Shorts, L</label
-                        >
-                        <label for="Women's Mountain Shorts, M">
-                            <input
-                                type="checkbox"
-                                id="Women's Mountain Shorts, M"
-                                value="Women's Mountain Shorts, M"
-                            />Women's Mountain Shorts, M</label
-                        >
-                        <label for="Women's Mountain Shorts, S">
-                            <input
-                                type="checkbox"
-                                id="Women's Mountain Shorts, S"
-                                value="Women's Mountain Shorts, S"
-                            />Women's Mountain Shorts, S</label
-                        >
-                        </div>
-                      </div>
-                  </div>
-                <div class="main-cards">
-                    <div class="cards-wan">
-                        <div class="box-wan">
-                            <div class="main-wan-title">
-                                <div class="main-title-number">
-                                    <div class="box-title">Revenue</div>
-                                    <div class="main-title-number">
-                                        30,6 M
-                                    </div>
-                                </div>
-                                <div class="main-title-icon">
-                                   <i class="fa-solid fa-sack-dollar"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-wan">
-                            <div class="main-wan-title">
-                                <div class="main-title-number">
-                                    <div class="box-title">Profit</div>
-                                    <div class="main-title-number">
-                                        11,9 M
-                                    </div>
-                                </div>
-                                <div class="main-title-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-wan">
-                            <div class="main-wan-title">
-                                <div class="main-title-number">
-                                    <div class="box-title">Item Sold</div>
-                                    <div class="main-title-number">
-                                        645,1 K
-                                    </div>
-                                </div>
-                                <div class="main-title-icon">
-                                  <i class="fa-solid fa-cart-shopping"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards-tow">
-                        <div class="box-tow-bar">
-                            <div class="box-title-tow">
-                                Sales by Product Category and Country
-                            </div> 
-                            <canvas id="salesChart" width="600px" height="210px"></canvas>
-                            <div id="bar-grub"></div>
-                        </div>
-                    </div>
-                    <div class="cards-tree">
-                        <div class="box-tree">
-                            <p>Age Group Distribution by Revenue</p>
-                            <div class="box-pie-chart" id="pie-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-line">
-                    <div class="cards-line-wan">
-                        <div class="box-line-wan">
-                            <div class="box-line-title">
-                                Gender Distribution by Country and Revenue
-                            </div>
-                            <canvas id="distributionChart" width="600px" height="400px"></canvas>
-                        </div>
-                    </div>
-                <div class="table-container">
-                    <h1>Top Performance Product</h1>
-                    <table id="data-table" class="display" width="100%"></table>
-                    <div class="table-chart" id="data-table"></div>
-                    <div class="table-chart" id="data-table"></div>
-                </div>
+          <div class="multiselect">
+            <div class="selectBox" id="selectBoxProduct">
+              <select>
+                <option>Select Product</option>
+              </select>
+              <div class="overSelect"></div>
             </div>
-        </main>
-            <!-- End Main -->
+            <div id="checkboxesProduct">
+              <label for="All-Purpose Bike Stand">
+                <input
+                  type="checkbox"
+                  id="All-Purpose Bike Stand"
+                  value="All-Purpose Bike Stand"
+                />All-Purpose Bike Stand</label
+              >
+              <label for="AWC Logo Cap">
+                <input
+                  type="checkbox"
+                  id="AWC Logo Cap"
+                  value="AWC Logo Cap"
+                />AWC Logo Cap</label
+              >
+              <label for="Bike Wash - Dissolver">
+                <input
+                  type="checkbox"
+                  id="Bike Wash - Dissolver"
+                  value="Bike Wash - Dissolver"
+                />Bike Wash - Dissolver</label
+              >
+              <label for="Classic Vest, L">
+                <input
+                  type="checkbox"
+                  id="Classic Vest, L"
+                  value="Classic Vest, L"
+                />Classic Vest, L</label
+              >
+              <label for="Classic Vest, M">
+                <input
+                  type="checkbox"
+                  id="Classic Vest, M"
+                  value="Classic Vest, M"
+                />Classic Vest, M</label
+              >
+              <label for="Classic Vest, S">
+                <input
+                  type="checkbox"
+                  id="Classic Vest, S"
+                  value="Classic Vest, S"
+                />Classic Vest, S</label
+              >
+              <label for="Fender Set - Mountain">
+                <input
+                  type="checkbox"
+                  id="Fender Set - Mountain"
+                  value="Fender Set - Mountain"
+                />Fender Set - Mountain</label
+              >
+              <label for="Half-Finger Gloves, L">
+                <input
+                  type="checkbox"
+                  id="Half-Finger Gloves, L"
+                  value="Half-Finger Gloves, L"
+                />Half-Finger Gloves, L</label
+              >
+              <label for="Half-Finger Gloves, M">
+                <input
+                  type="checkbox"
+                  id="Half-Finger Gloves, M"
+                  value="Half-Finger Gloves, M"
+                />Half-Finger Gloves, M</label
+              >
+              <label for="Half-Finger Gloves, S">
+                <input
+                  type="checkbox"
+                  id="Half-Finger Gloves, S"
+                  value="Half-Finger Gloves, S"
+                />Half-Finger Gloves, S</label
+              >
+              <label for="Hitch Rack - 4-Bike">
+                <input
+                  type="checkbox"
+                  id="Hitch Rack - 4-Bike"
+                  value="Hitch Rack - 4-Bike"
+                />Hitch Rack - 4-Bike</label
+              >
+              <label for="HL Mountain Tire">
+                <input
+                  type="checkbox"
+                  id="HL Mountain Tire"
+                  value="HL Mountain Tire"
+                />HL Mountain Tire</label
+              >
+              <label for="HL Road Tire">
+                <input
+                  type="checkbox"
+                  id="HL Road Tire"
+                  value="HL Road Tire"
+                />HL Road Tire</label
+              >
+              <label for="Hydration Pack - 70 oz.">
+                <input
+                  type="checkbox"
+                  id="Hydration Pack - 70 oz."
+                  value="Hydration Pack - 70 oz."
+                />Hydration Pack - 70 oz.</label
+              >
+              <label for="LL Mountain Tire">
+                <input
+                  type="checkbox"
+                  id="LL Mountain Tire"
+                  value="LL Mountain Tire"
+                />LL Mountain Tire</label
+              >
+              <label for="LL Road Tire">
+                <input
+                  type="checkbox"
+                  id="LL Road Tire"
+                  value="LL Road Tire"
+                />LL Road Tire</label
+              >
+              <label for="Long-Sleeve Logo Jersey, L">
+                <input
+                  type="checkbox"
+                  id="Long-Sleeve Logo Jersey, L"
+                  value="Long-Sleeve Logo Jersey, L"
+                />Long-Sleeve Logo Jersey, L</label
+              >
+              <label for="Long-Sleeve Logo Jersey, M">
+                <input
+                  type="checkbox"
+                  id="Long-Sleeve Logo Jersey, M"
+                  value="Long-Sleeve Logo Jersey, M"
+                />Long-Sleeve Logo Jersey, M</label
+              >
+              <label for="Long-Sleeve Logo Jersey, S">
+                <input
+                  type="checkbox"
+                  id="Long-Sleeve Logo Jersey, S"
+                  value="Long-Sleeve Logo Jersey, S"
+                />Long-Sleeve Logo Jersey, S</label
+              >
+              <label for="Long-Sleeve Logo Jersey, XL">
+                <input
+                  type="checkbox"
+                  id="Long-Sleeve Logo Jersey, XL"
+                  value="Long-Sleeve Logo Jersey, XL"
+                />Long-Sleeve Logo Jersey, XL</label
+              >
+              <label for="ML Mountain Tire">
+                <input
+                  type="checkbox"
+                  id="ML Mountain Tire"
+                  value="ML Mountain Tire"
+                />ML Mountain Tire</label
+              >
+              <label for="ML Road Tire">
+                <input
+                  type="checkbox"
+                  id="ML Road Tire"
+                  value="ML Road Tire"
+                />ML Road Tire</label
+              >
+              <label for="Mountain Bottle Cage">
+                <input
+                  type="checkbox"
+                  id="Mountain Bottle Cage"
+                  value="Mountain Bottle Cage"
+                />Mountain Bottle Cage</label
+              >
+              <label for="Mountain Tire Tube">
+                <input
+                  type="checkbox"
+                  id="Mountain Tire Tube"
+                  value="Mountain Tire Tube"
+                />Mountain Tire Tube</label
+              >
+              <label for="Mountain-100 Black, 38">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Black, 38"
+                  value="Mountain-100 Black, 38"
+                />Mountain-100 Black, 38</label
+              >
+              <label for="Mountain-100 Black, 42">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Black, 42"
+                  value="Mountain-100 Black, 42"
+                />Mountain-100 Black, 42</label
+              >
+              <label for="Mountain-100 Black, 44">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Black, 44"
+                  value="Mountain-100 Black, 44"
+                />Mountain-100 Black, 44</label
+              >
+              <label for="Mountain-100 Black, 48">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Black, 48"
+                  value="Mountain-100 Black, 48"
+                />Mountain-100 Black, 48</label
+              >
+              <label for="Mountain-100 Silver, 38">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Silver, 38"
+                  value="Mountain-100 Silver, 38"
+                />Mountain-100 Silver, 38</label
+              >
+              <label for="Mountain-100 Silver, 42">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Silver, 42"
+                  value="Mountain-100 Silver, 42"
+                />Mountain-100 Silver, 42</label
+              >
+              <label for="Mountain-100 Silver, 44">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Silver, 44"
+                  value="Mountain-100 Silver, 44"
+                />Mountain-100 Silver, 44</label
+              >
+              <label for="Mountain-100 Silver, 48">
+                <input
+                  type="checkbox"
+                  id="Mountain-100 Silver, 48"
+                  value="Mountain-100 Silver, 48"
+                />Mountain-100 Silver, 48</label
+              >
+              <label for="Mountain-200 Black, 38">
+                <input
+                  type="checkbox"
+                  id="Mountain-200 Black, 38"
+                  value="Mountain-200 Black, 38"
+                />Mountain-200 Black, 38</label
+              >
+              <label for="Mountain-200 Black, 42">
+                <input
+                  type="checkbox"
+                  id="Mountain-200 Black, 42"
+                  value="Mountain-200 Black, 42"
+                />Mountain-200 Black, 42</label
+              >
+              <label for="Mountain-200 Black, 46">
+                <input
+                  type="checkbox"
+                  id="Mountain-200 Black, 46"
+                  value="Mountain-200 Black, 46"
+                />Mountain-200 Black, 46</label
+              >
+              <label for="Mountain-200 Silver, 38">
+                <input
+                  type="checkbox"
+                  id="Mountain-200 Silver, 38"
+                  value="Mountain-200 Silver, 38"
+                />Mountain-200 Silver, 38</label
+              >
+              <label for="Mountain-200 Silver, 42">
+                <input
+                  type="checkbox"
+                  id="Mountain-200 Silver, 42"
+                  value="Mountain-200 Silver, 42"
+                />Mountain-200 Silver, 42</label
+              >
+              <label for="Mountain-200 Silver, 46">
+                <input
+                  type="checkbox"
+                  id="Mountain-200 Silver, 46"
+                  value="Mountain-200 Silver, 46"
+                />Mountain-200 Silver, 46</label
+              >
+              <label for="Mountain-400-W Silver, 38">
+                <input
+                  type="checkbox"
+                  id="Mountain-400-W Silver, 38"
+                  value="Mountain-400-W Silver, 38"
+                />Mountain-400-W Silver, 38</label
+              >
+              <label for="Mountain-400-W Silver, 40">
+                <input
+                  type="checkbox"
+                  id="Mountain-400-W Silver, 40"
+                  value="Mountain-400-W Silver, 40"
+                />Mountain-400-W Silver, 40</label
+              >
+              <label for="Mountain-400-W Silver, 42">
+                <input
+                  type="checkbox"
+                  id="Mountain-400-W Silver, 42"
+                  value="Mountain-400-W Silver, 42"
+                />Mountain-400-W Silver, 42</label
+              >
+              <label for="Mountain-400-W Silver, 46">
+                <input
+                  type="checkbox"
+                  id="Mountain-400-W Silver, 46"
+                  value="Mountain-400-W Silver, 46"
+                />Mountain-400-W Silver, 46</label
+              >
+              <label for="Mountain-500 Black, 40">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Black, 40"
+                  value="Mountain-500 Black, 40"
+                />Mountain-500 Black, 40</label
+              >
+              <label for="Mountain-500 Black, 42">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Black, 42"
+                  value="Mountain-500 Black, 42"
+                />Mountain-500 Black, 42</label
+              >
+              <label for="Mountain-500 Black, 44">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Black, 44"
+                  value="Mountain-500 Black, 44"
+                />Mountain-500 Black, 44</label
+              >
+              <label for="Mountain-500 Black, 48">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Black, 48"
+                  value="Mountain-500 Black, 48"
+                />Mountain-500 Black, 48</label
+              >
+              <label for="Mountain-500 Black, 52">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Black, 52"
+                  value="Mountain-500 Black, 52"
+                />Mountain-500 Black, 52</label
+              >
+              <label for="Mountain-500 Silver, 40">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Silver, 40"
+                  value="Mountain-500 Silver, 40"
+                />Mountain-500 Silver, 40</label
+              >
+              <label for="Mountain-500 Silver, 42">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Silver, 42"
+                  value="Mountain-500 Silver, 42"
+                />Mountain-500 Silver, 42</label
+              >
+              <label for="Mountain-500 Silver, 44">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Silver, 44"
+                  value="Mountain-500 Silver, 44"
+                />Mountain-500 Silver, 44</label
+              >
+              <label for="Mountain-500 Silver, 48">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Silver, 48"
+                  value="Mountain-500 Silver, 48"
+                />Mountain-500 Silver, 48</label
+              >
+              <label for="Mountain-500 Silver, 52">
+                <input
+                  type="checkbox"
+                  id="Mountain-500 Silver, 52"
+                  value="Mountain-500 Silver, 52"
+                />Mountain-500 Silver, 52</label
+              >
+              <label for="Patch Kit/8 Patches">
+                <input
+                  type="checkbox"
+                  id="Patch Kit/8 Patches"
+                  value="Patch Kit/8 Patches"
+                />Patch Kit/8 Patches</label
+              >
+              <label for="Racing Socks, L">
+                <input
+                  type="checkbox"
+                  id="Racing Socks, L"
+                  value="Racing Socks, L"
+                />Racing Socks, L</label
+              >
+              <label for="Racing Socks, M">
+                <input
+                  type="checkbox"
+                  id="Racing Socks, M"
+                  value="Racing Socks, M"
+                />Racing Socks, M</label
+              >
+              <label for="Road Bottle Cage">
+                <input
+                  type="checkbox"
+                  id="Road Bottle Cage"
+                  value="Road Bottle Cage"
+                />Road Bottle Cage</label
+              >
+              <label for="Road Tire Tube">
+                <input
+                  type="checkbox"
+                  id="Road Tire Tube"
+                  value="Road Tire Tube"
+                />Road Tire Tube</label
+              >
+              <label for="Road-150 Red, 44">
+                <input
+                  type="checkbox"
+                  id="Road-150 Red, 44"
+                  value="Road-150 Red, 44"
+                />Road-150 Red, 44</label
+              >
+              <label for="Road-150 Red, 48">
+                <input
+                  type="checkbox"
+                  id="Road-150 Red, 48"
+                  value="Road-150 Red, 48"
+                />Road-150 Red, 48</label
+              >
+              <label for="Road-150 Red, 52">
+                <input
+                  type="checkbox"
+                  id="Road-150 Red, 52"
+                  value="Road-150 Red, 52"
+                />Road-150 Red, 52</label
+              >
+              <label for="Road-150 Red, 56">
+                <input
+                  type="checkbox"
+                  id="Road-150 Red, 56"
+                  value="Road-150 Red, 56"
+                />Road-150 Red, 56</label
+              >
+              <label for="Road-150 Red, 62">
+                <input
+                  type="checkbox"
+                  id="Road-150 Red, 62"
+                  value="Road-150 Red, 62"
+                />Road-150 Red, 62</label
+              >
+              <label for="Road-250 Black, 44">
+                <input
+                  type="checkbox"
+                  id="Road-250 Black, 44"
+                  value="Road-250 Black, 44"
+                />Road-250 Black, 44</label
+              >
+              <label for="Road-250 Black, 48">
+                <input
+                  type="checkbox"
+                  id="Road-250 Black, 48"
+                  value="Road-250 Black, 48"
+                />Road-250 Black, 48</label
+              >
+              <label for="Road-250 Black, 52">
+                <input
+                  type="checkbox"
+                  id="Road-250 Black, 52"
+                  value="Road-250 Black, 52"
+                />Road-250 Black, 52</label
+              >
+              <label for="Road-250 Black, 58">
+                <input
+                  type="checkbox"
+                  id="Road-250 Black, 58"
+                  value="Road-250 Black, 58"
+                />Road-250 Black, 58</label
+              >
+              <label for="Road-250 Red, 44">
+                <input
+                  type="checkbox"
+                  id="Road-250 Red, 44"
+                  value="Road-250 Red, 44"
+                />Road-250 Red, 44</label
+              >
+              <label for="Road-250 Red, 48">
+                <input
+                  type="checkbox"
+                  id="Road-250 Red, 48"
+                  value="Road-250 Red, 48"
+                />Road-250 Red, 48</label
+              >
+              <label for="Road-250 Red, 52">
+                <input
+                  type="checkbox"
+                  id="Road-250 Red, 52"
+                  value="Road-250 Red, 52"
+                />Road-250 Red, 52</label
+              >
+              <label for="Road-250 Red, 58">
+                <input
+                  type="checkbox"
+                  id="Road-250 Red, 58"
+                  value="Road-250 Red, 58"
+                />Road-250 Red, 58</label
+              >
+              <label for="Road-350-W Yellow, 40">
+                <input
+                  type="checkbox"
+                  id="Road-350-W Yellow, 40"
+                  value="Road-350-W Yellow, 40"
+                />Road-350-W Yellow, 40</label
+              >
+              <label for="Road-350-W Yellow, 42">
+                <input
+                  type="checkbox"
+                  id="Road-350-W Yellow, 42"
+                  value="Road-350-W Yellow, 42"
+                />Road-350-W Yellow, 42</label
+              >
+              <label for="Road-350-W Yellow, 44">
+                <input
+                  type="checkbox"
+                  id="Road-350-W Yellow, 44"
+                  value="Road-350-W Yellow, 44"
+                />Road-350-W Yellow, 44</label
+              >
+              <label for="Road-350-W Yellow, 48">
+                <input
+                  type="checkbox"
+                  id="Road-350-W Yellow, 48"
+                  value="Road-350-W Yellow, 48"
+                />Road-350-W Yellow, 48</label
+              >
+              <label for="Road-550-W Yellow, 38">
+                <input
+                  type="checkbox"
+                  id="Road-550-W Yellow, 38"
+                  value="Road-550-W Yellow, 38"
+                />Road-550-W Yellow, 38</label
+              >
+              <label for="Road-550-W Yellow, 40">
+                <input
+                  type="checkbox"
+                  id="Road-550-W Yellow, 40"
+                  value="Road-550-W Yellow, 40"
+                />Road-550-W Yellow, 40</label
+              >
+              <label for="Road-550-W Yellow, 42">
+                <input
+                  type="checkbox"
+                  id="Road-550-W Yellow, 42"
+                  value="Road-550-W Yellow, 42"
+                />Road-550-W Yellow, 42</label
+              >
+              <label for="Road-550-W Yellow, 44">
+                <input
+                  type="checkbox"
+                  id="Road-550-W Yellow, 44"
+                  value="Road-550-W Yellow, 44"
+                />Road-550-W Yellow, 44</label
+              >
+              <label for="Road-550-W Yellow, 48">
+                <input
+                  type="checkbox"
+                  id="Road-550-W Yellow, 48"
+                  value="Road-550-W Yellow, 48"
+                />Road-550-W Yellow, 48</label
+              >
+              <label for="Road-650 Black, 44">
+                <input
+                  type="checkbox"
+                  id="Road-650 Black, 44"
+                  value="Road-650 Black, 44"
+                />Road-650 Black, 44</label
+              >
+              <label for="Road-650 Black, 48">
+                <input
+                  type="checkbox"
+                  id="Road-650 Black, 48"
+                  value="Road-650 Black, 48"
+                />Road-650 Black, 48</label
+              >
+              <label for="Road-650 Black, 52">
+                <input
+                  type="checkbox"
+                  id="Road-650 Black, 52"
+                  value="Road-650 Black, 52"
+                />Road-650 Black, 52</label
+              >
+              <label for="Road-650 Black, 58">
+                <input
+                  type="checkbox"
+                  id="Road-650 Black, 58"
+                  value="Road-650 Black, 58"
+                />Road-650 Black, 58</label
+              >
+              <label for="Road-650 Black, 60">
+                <input
+                  type="checkbox"
+                  id="Road-650 Black, 60"
+                  value="Road-650 Black, 60"
+                />Road-650 Black, 60</label
+              >
+              <label for="Road-650 Black, 62">
+                <input
+                  type="checkbox"
+                  id="Road-650 Black, 62"
+                  value="Road-650 Black, 62"
+                />Road-650 Black, 62</label
+              >
+              <label for="Road-650 Red, 44">
+                <input
+                  type="checkbox"
+                  id="Road-650 Red, 44"
+                  value="Road-650 Red, 44"
+                />Road-650 Red, 44</label
+              >
+              <label for="Road-650 Red, 48">
+                <input
+                  type="checkbox"
+                  id="Road-650 Red, 48"
+                  value="Road-650 Red, 48"
+                />Road-650 Red, 48</label
+              >
+              <label for="Road-650 Red, 52">
+                <input
+                  type="checkbox"
+                  id="Road-650 Red, 52"
+                  value="Road-650 Red, 52"
+                />Road-650 Red, 52</label
+              >
+              <label for="Road-650 Red, 58">
+                <input
+                  type="checkbox"
+                  id="Road-650 Red, 58"
+                  value="Road-650 Red, 58"
+                />Road-650 Red, 58</label
+              >
+              <label for="Road-650 Red, 60">
+                <input
+                  type="checkbox"
+                  id="Road-650 Red, 60"
+                  value="Road-650 Red, 60"
+                />Road-650 Red, 60</label
+              >
+              <label for="Road-650 Red, 62">
+                <input
+                  type="checkbox"
+                  id="Road-650 Red, 62"
+                  value="Road-650 Red, 62"
+                />Road-650 Red, 62</label
+              >
+              <label for="Road-750 Black, 44">
+                <input
+                  type="checkbox"
+                  id="Road-750 Black, 44"
+                  value="Road-750 Black, 44"
+                />Road-750 Black, 44</label
+              >
+              <label for="Road-750 Black, 48">
+                <input
+                  type="checkbox"
+                  id="Road-750 Black, 48"
+                  value="Road-750 Black, 48"
+                />Road-750 Black, 48</label
+              >
+              <label for="Road-750 Black, 52">
+                <input
+                  type="checkbox"
+                  id="Road-750 Black, 52"
+                  value="Road-750 Black, 52"
+                />Road-750 Black, 52</label
+              >
+              <label for="Road-750 Black, 58">
+                <input
+                  type="checkbox"
+                  id="Road-750 Black, 58"
+                  value="Road-750 Black, 58"
+                />Road-750 Black, 58</label
+              >
+              <label for="Short-Sleeve Classic Jersey, L">
+                <input
+                  type="checkbox"
+                  id="Short-Sleeve Classic Jersey, L"
+                  value="Short-Sleeve Classic Jersey, L"
+                />Short-Sleeve Classic Jersey, L</label
+              >
+              <label for="Short-Sleeve Classic Jersey, M">
+                <input
+                  type="checkbox"
+                  id="Short-Sleeve Classic Jersey, M"
+                  value="Short-Sleeve Classic Jersey, M"
+                />Short-Sleeve Classic Jersey, M</label
+              >
+              <label for="Short-Sleeve Classic Jersey, S">
+                <input
+                  type="checkbox"
+                  id="Short-Sleeve Classic Jersey, S"
+                  value="Short-Sleeve Classic Jersey, S"
+                />Short-Sleeve Classic Jersey, S</label
+              >
+              <label for="Short-Sleeve Classic Jersey, XL">
+                <input
+                  type="checkbox"
+                  id="Short-Sleeve Classic Jersey, XL"
+                  value="Short-Sleeve Classic Jersey, XL"
+                />Short-Sleeve Classic Jersey, XL</label
+              >
+              <label for="Sport-100 Helmet, Black">
+                <input
+                  type="checkbox"
+                  id="Sport-100 Helmet, Black"
+                  value="Sport-100 Helmet, Black"
+                />Sport-100 Helmet, Black</label
+              >
+              <label for="Sport-100 Helmet, Blue">
+                <input
+                  type="checkbox"
+                  id="Sport-100 Helmet, Blue"
+                  value="Sport-100 Helmet, Blue"
+                />Sport-100 Helmet, Blue</label
+              >
+              <label for="Sport-100 Helmet, Red">
+                <input
+                  type="checkbox"
+                  id="Sport-100 Helmet, Red"
+                  value="Sport-100 Helmet, Red"
+                />Sport-100 Helmet, Red</label
+              >
+              <label for="Touring Tire">
+                <input
+                  type="checkbox"
+                  id="Touring Tire"
+                  value="Touring Tire"
+                />Touring Tire</label
+              >
+              <label for="Touring Tire Tube">
+                <input
+                  type="checkbox"
+                  id="Touring Tire Tube"
+                  value="Touring Tire Tube"
+                />Touring Tire Tube</label
+              >
+              <label for="Touring-1000 Blue, 46">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Blue, 46"
+                  value="Touring-1000 Blue, 46"
+                />Touring-1000 Blue, 46</label
+              >
+              <label for="Touring-1000 Blue, 50">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Blue, 50"
+                  value="Touring-1000 Blue, 50"
+                />Touring-1000 Blue, 50</label
+              >
+              <label for="Touring-1000 Blue, 54">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Blue, 54"
+                  value="Touring-1000 Blue, 54"
+                />Touring-1000 Blue, 54</label
+              >
+              <label for="Touring-1000 Blue, 60">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Blue, 60"
+                  value="Touring-1000 Blue, 60"
+                />Touring-1000 Blue, 60</label
+              >
+              <label for="Touring-1000 Yellow, 46">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Yellow, 46"
+                  value="Touring-1000 Yellow, 46"
+                />Touring-1000 Yellow, 46</label
+              >
+              <label for="Touring-1000 Yellow, 50">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Yellow, 50"
+                  value="Touring-1000 Yellow, 50"
+                />Touring-1000 Yellow, 50</label
+              >
+              <label for="Touring-1000 Yellow, 54">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Yellow, 54"
+                  value="Touring-1000 Yellow, 54"
+                />Touring-1000 Yellow, 54</label
+              >
+              <label for="Touring-1000 Yellow, 60">
+                <input
+                  type="checkbox"
+                  id="Touring-1000 Yellow, 60"
+                  value="Touring-1000 Yellow, 60"
+                />Touring-1000 Yellow, 60</label
+              >
+              <label for="Touring-2000 Blue, 46">
+                <input
+                  type="checkbox"
+                  id="Touring-2000 Blue, 46"
+                  value="Touring-2000 Blue, 46"
+                />Touring-2000 Blue, 46</label
+              >
+              <label for="Touring-2000 Blue, 50">
+                <input
+                  type="checkbox"
+                  id="Touring-2000 Blue, 50"
+                  value="Touring-2000 Blue, 50"
+                />Touring-2000 Blue, 50</label
+              >
+              <label for="Touring-2000 Blue, 54">
+                <input
+                  type="checkbox"
+                  id="Touring-2000 Blue, 54"
+                  value="Touring-2000 Blue, 54"
+                />Touring-2000 Blue, 54</label
+              >
+              <label for="Touring-2000 Blue, 60">
+                <input
+                  type="checkbox"
+                  id="Touring-2000 Blue, 60"
+                  value="Touring-2000 Blue, 60"
+                />Touring-2000 Blue, 60</label
+              >
+              <label for="Touring-3000 Blue, 44">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Blue, 44"
+                  value="Touring-3000 Blue, 44"
+                />Touring-3000 Blue, 44</label
+              >
+              <label for="Touring-3000 Blue, 50">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Blue, 50"
+                  value="Touring-3000 Blue, 50"
+                />Touring-3000 Blue, 50</label
+              >
+              <label for="Touring-3000 Blue, 54">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Blue, 54"
+                  value="Touring-3000 Blue, 54"
+                />Touring-3000 Blue, 54</label
+              >
+              <label for="Touring-3000 Blue, 58">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Blue, 58"
+                  value="Touring-3000 Blue, 58"
+                />Touring-3000 Blue, 58</label
+              >
+              <label for="Touring-3000 Blue, 62">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Blue, 62"
+                  value="Touring-3000 Blue, 62"
+                />Touring-3000 Blue, 62</label
+              >
+              <label for="Touring-3000 Yellow, 44">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Yellow, 44"
+                  value="Touring-3000 Yellow, 44"
+                />Touring-3000 Yellow, 44</label
+              >
+              <label for="Touring-3000 Yellow, 50">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Yellow, 50"
+                  value="Touring-3000 Yellow, 50"
+                />Touring-3000 Yellow, 50</label
+              >
+              <label for="Touring-3000 Yellow, 54">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Yellow, 54"
+                  value="Touring-3000 Yellow, 54"
+                />Touring-3000 Yellow, 54</label
+              >
+              <label for="Touring-3000 Yellow, 58">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Yellow, 58"
+                  value="Touring-3000 Yellow, 58"
+                />Touring-3000 Yellow, 58</label
+              >
+              <label for="Touring-3000 Yellow, 62">
+                <input
+                  type="checkbox"
+                  id="Touring-3000 Yellow, 62"
+                  value="Touring-3000 Yellow, 62"
+                />Touring-3000 Yellow, 62</label
+              >
+              <label for="Water Bottle - 30 oz.">
+                <input
+                  type="checkbox"
+                  id="Water Bottle - 30 oz."
+                  value="Water Bottle - 30 oz."
+                />Water Bottle - 30 oz.</label
+              >
+              <label for="Women's Mountain Shorts, L">
+                <input
+                  type="checkbox"
+                  id="Women's Mountain Shorts, L"
+                  value="Women's Mountain Shorts, L"
+                />Women's Mountain Shorts, L</label
+              >
+              <label for="Women's Mountain Shorts, M">
+                <input
+                  type="checkbox"
+                  id="Women's Mountain Shorts, M"
+                  value="Women's Mountain Shorts, M"
+                />Women's Mountain Shorts, M</label
+              >
+              <label for="Women's Mountain Shorts, S">
+                <input
+                  type="checkbox"
+                  id="Women's Mountain Shorts, S"
+                  value="Women's Mountain Shorts, S"
+                />Women's Mountain Shorts, S</label
+              >
+            </div>
+          </div>
         </div>
-        <!-- Scripts -->
-        <!-- ApexCharts -->
-        <!--data table script-->
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-        <!--Apexcharts-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript"></script>
+        <div class="main-cards">
+          <div class="cards-wan">
+            <div class="box-wan">
+              <div class="main-wan-title">
+                <div class="main-title-number">
+                  <div class="box-title">Revenue</div>
+                  <div class="main-title-number" id="revenue"></div>
+                </div>
+                <div class="main-title-icon">
+                  <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box-wan">
+              <div class="main-wan-title">
+                <div class="main-title-number">
+                  <div class="box-title">Profit</div>
+                  <div class="main-title-number" id="profit"></div>
+                </div>
+                <div class="main-title-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box-wan">
+              <div class="main-wan-title">
+                <div class="main-title-number">
+                  <div class="box-title">Item Sold</div>
+                  <div class="main-title-number" id="itemSold"></div>
+                </div>
+                <div class="main-title-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards-tow">
+            <div class="box-tow-bar">
+              <div class="box-title-tow">
+                Sales by Product Category and Country
+              </div>
+              <canvas id="salesChart"></canvas>
+              <div id="bar-grub"></div>
+            </div>
+          </div>
+          <div class="cards-tree">
+            <div class="box-tree">
+              <p>Age Group Distribution by Revenue</p>
+              <div class="box-pie-chart" id="pie-chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="main-line">
+          <div class="cards-line-wan">
+            <div class="box-line-wan">
+              <div class="box-line-title">
+                Gender Distribution by Country and Revenue
+              </div>
+              <canvas
+                id="distributionChart"
+                width="600px"
+                height="400px"
+              ></canvas>
+            </div>
+          </div>
+          <div class="table-container">
+            <h1>Top Performance Product</h1>
+            <table id="data-table" class="display" width="100%"></table>
+            <div class="table-chart" id="data-table"></div>
+            <div class="table-chart" id="data-table"></div>
+          </div>
+        </div>
+      </main>
+      <!-- End Main -->
+    </div>
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <!--data table script-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <!--Apexcharts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript"></script>
 
-        <!-- Custom JS -->
-        <script src="js/table.js"></script>
-        <script src="js/filtering.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/bar-grup.js"></script>
-        <script src="js/pie-charts.js"></script>
-        <script src="js/bar-line-y.js"></script>
-        <script src="js/table.js"></script>
-    </body>
+    <!-- Custom JS -->
+    <script src="js/table.js"></script>
+    <script src="js/filtering.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/bar-grup.js"></script>
+    <script src="js/pie-charts.js"></script>
+    <script src="js/bar-line-y.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/scoreCard.js"></script>
+  </body>
 </html>
