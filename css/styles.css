@@ -4,6 +4,7 @@ body {
   background-color: #ffffff;
   color: #9e9ea4;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 .main-title {
   font-size: 27px;
@@ -23,6 +24,7 @@ body {
     "sidebar header header header"
     "sidebar main main main";
   height: 100vh;
+  width: 100%;
 }
 
 /* ---------- HEADER ---------- */
@@ -46,6 +48,7 @@ body {
 #sidebar {
   grid-area: sidebar;
   height: 100%;
+  width: 100%;
   background-color: #31bacb;
   overflow-y: auto;
   transition: all 0.5s;
@@ -112,9 +115,12 @@ body {
 
 .main-container {
   grid-area: main;
+  width: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 0px 10px;
   color: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
 }
 .main-title {
   display: flex;
@@ -125,8 +131,7 @@ body {
 /*filtering*/
 .filtering-container {
   display: flex;
-  justify-content: start;
-  gap: 75px;
+  justify-content: space-around;
   margin-left: 10px;
   width: 100%;
 }
@@ -364,7 +369,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  /* margin: 20px 0;/ */
+  margin-bottom: 20px;
 }
 
 .cards-wan {
@@ -498,16 +503,6 @@ body {
   font-size: 16px;
 }
 
-.cards-line-tow {
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 15px;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 table {
   color: black;
   font-size: 12px;
@@ -516,13 +511,18 @@ table {
 .table-container {
   width: 100%;
   overflow-x: auto;
+  border: 2px solid black;
+  padding-left: 6px;
+  padding-right: 6px;
+  box-sizing: border-box;
+  border-radius: 6px;
 }
 
 .table-container h1 {
   text-align: center;
   margin-bottom: 10px;
   color: rgb(237, 76, 103);
-  margin-top: 0;
+  margin-top: 15;
   font-size: 17px;
   background-color: #d9d9d9;
   border-radius: 5px;

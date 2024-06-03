@@ -9,8 +9,7 @@ function toggleCheckboxes(selectBoxId, checkboxesId) {
         console.error(`Element with ID ${checkboxesId} not found`);
         return;
       }
-  
-      console.log(`Toggling ${checkboxesId}, expanded: ${expanded}`);
+
   
       if (!expanded) {
         checkboxes.style.display = "block";
