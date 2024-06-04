@@ -134,6 +134,7 @@ body {
   justify-content: space-around;
   margin-left: 10px;
   width: 100%;
+  cursor: initial;
 }
 
 .multiselect {
@@ -374,7 +375,7 @@ body {
 
 .cards-wan {
   padding: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
