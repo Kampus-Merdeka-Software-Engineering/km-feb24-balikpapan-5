@@ -22,14 +22,14 @@ function updateData(data, years) {
   let itemSold = 0;
 
   if (years.length === 0) {
-    // Jika tidak ada checkbox yang dipilih, tampilkan total dari semua tahun
+    // Jika tidak ada checkbox yang dipilih, menampilkan total dari semua tahun
     data["cards-wan"].forEach((item) => {
       revenue += item.revenue;
       profit += item.profit;
       itemSold += item.itemSold;
     });
   } else {
-    // Jika ada checkbox yang dipilih, tampilkan data dari tahun-tahun tersebut
+    // menampilkan data dari checkbox yang dipilih
     data["cards-wan"].forEach((item) => {
       if (years.includes(item.year.toString())) {
         revenue += item.revenue;
