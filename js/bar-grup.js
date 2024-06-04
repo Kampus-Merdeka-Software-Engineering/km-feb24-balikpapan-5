@@ -120,6 +120,20 @@ document.addEventListener("DOMContentLoaded", function () {
         datasets: datasets,
       },
       options: {
+        animation: {
+          onComplete: function () {
+            window.delayed = true;
+          },
+          delay: function (context) {
+            let delay = 0;
+            if (context.type === 'data' && context.mode === 'default' && !window.delayed) {
+              delay = context.dataIndex * 300 + context.datasetIndex * 100;
+            }
+            return delay;
+          },
+          duration: 1000, // Durasi animasi dalam milidetik
+          easing: 'easeInElastic' // Efek easing
+        },
         scales: {
           x: { stacked: true },
           y: {
