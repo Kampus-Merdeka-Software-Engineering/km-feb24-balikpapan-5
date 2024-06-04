@@ -132,7 +132,6 @@ body {
 .filtering-container {
   display: flex;
   justify-content: space-around;
-  margin-left: 10px;
   width: 100%;
   cursor: initial;
 }
@@ -244,7 +243,6 @@ body {
   display: block;
   margin-top: 4px;
   font-weight: 400;
-  font-weight: bold;
   color: black;
   font-size: 13px;
 }
@@ -284,78 +282,6 @@ body {
 }
 
 #checkboxesProductCategory label:hover {
-  background-color: #31bacb;
-}
-
-/* .selectBoxSubCategory {
-  position: relative;
-}
-
-#selectBoxSubCategory select {
-  height: 42px;
-  width:180px;
-  border-radius: 7px;
-  color: #9e9ea4;
-}
-
-#checkboxesSubCategory {
-  display: none;
-  border: 1px #dadada solid;
-  z-index: 10;
-  position: absolute;
-  background-color: white;
-  max-height: 200px; 
-  overflow-y: auto; 
-  width: 94%;
-  border-radius: 4px;
-  padding: 6px;
-}
-
-#checkboxesSubCategory label {
-  display: block;
-  margin-top: 4px;
-  font-weight: 400;
-  color: black;
-  font-size: 13px;
-}
-
-#checkboxesSubCategory label:hover {
-  background-color: #31bacb;
-} */
-
-.selectBoxProduct {
-  position: relative;
-}
-
-#selectBoxProduct select {
-  height: 42px;
-  width: 180px;
-  border-radius: 7px;
-  color: #9e9ea4;
-}
-
-#checkboxesProduct {
-  display: none;
-  border: 1px #dadada solid;
-  z-index: 10;
-  position: absolute;
-  background-color: white;
-  width: 94%;
-  max-height: 200px;
-  overflow-y: auto;
-  border-radius: 4px;
-  padding: 6px;
-}
-
-#checkboxesProduct label {
-  display: block;
-  margin-top: 4px;
-  font-weight: 400;
-  color: black;
-  font-size: 13px;
-}
-
-#checkboxesProduct label:hover {
   background-color: #31bacb;
 }
 
@@ -515,6 +441,7 @@ table {
   border: 2px solid black;
   padding-left: 6px;
   padding-right: 6px;
+  margin-bottom: 10px;
   box-sizing: border-box;
   border-radius: 6px;
 }
@@ -755,9 +682,35 @@ diganti jd 936px */
   }
 }
 
-/* Extra Small <= 576px */
+@media (max-width: 768px) {
+  .main-cards, .cards-tow, .cards-tree, .main-line, .cards-line-wan, .cards-line-tow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards-tree{
+    width: 100%;
+  }
+  .box-wan, .box-tow-bar, .box-tree, .box-line-wan, .table-container {
+    width: 100%;
+  }
+  .main-wan-title .box-title {
+    font-size: 1rem;
+  }
+  .main-title-number {
+    font-size: 1.2rem;
+  }
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .table-container h1 {
+    width: 100%;
+  }
+}
 
-@media screen and (max-width: 576px) {
+/*Extra Small */
+@media (max-width: 480px) {
   .hedaer-left {
     display: none;
   }
@@ -768,4 +721,59 @@ diganti jd 936px */
   .box-line-title {
     font-size: 0.6rem;
   }
+  .main-wan-title .box-title {
+    font-size: 0.9rem;
+  }
+  .cards-wan{
+    flex-wrap:wrap;
+    }
+  .box-wan{
+    margin-right: 0;
+  }
+  .main-title-number {
+    font-size: 1rem;
+  }
+  .box-title-tow, .box-line-title {
+    font-size: 14px;
+    padding: 2px 10px;
+    top: -10px;
+  }
+  .box-tree p {
+    font-size: 0.9rem;
+  }
+  .table-container h1 {
+    font-size: 15px;
+    padding: 8px;
+  }
+  table {
+    font-size: 10px;
+  }
+  .main-wan-title .box-title {
+    font-size: 0.9rem;
+  }
+  .main-title-number {
+    font-size: 1rem;
+  }
+
+  .box-title-tow {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
+  .cards-tow{
+    height: 100%;
+    width: fit-content;
+  }
+  .cards-tree{
+    width: 100%;
+  }
+}
+
+/* Extra Extra small */
+@media (max-width: 390px){
+  .filtering-container{
+    gap: 15px;
+  }
+  #selectBoxAgeGroup select, #selectBoxYear select, #selectBoxCountry select, #selectBoxProductCategory select{
+  width: 166px;
+}
 }
