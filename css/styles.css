@@ -227,35 +227,6 @@ body {
   background-color: #31bacb;
 }
 
-.selectBoxAgeGroup {
-  position: relative;
-}
-
-#selectBoxAgeGroup select {
-  height: 42px;
-  width: 180px;
-  border-radius: 7px;
-  color: #9e9ea4;
-}
-
-#checkboxesAgeGroup {
-  display: none;
-  border: 1px #dadada solid;
-  z-index: 10;
-  position: absolute;
-  background-color: white;
-  width: 94%;
-  border-radius: 4px;
-  padding: 6px;
-}
-
-#checkboxesAgeGroup label {
-  display: block;
-  margin-top: 4px;
-  font-weight: 400;
-  color: black;
-  font-size: 13px;
-}
 
 #checkboxesCountry label:hover {
   background-color: #31bacb;
@@ -719,4 +690,80 @@ diganti jd 936px */
   #selectBoxAgeGroup select, #selectBoxYear select, #selectBoxCountry select, #selectBoxProductCategory select{
   width: 166px;
 }
+}
+
+/* light and dark mode*/
+:root {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background-color: #0093a7;
+  --header-background-color: #1a1a1a;
+  --sidebar-background-color: #1a1a1a;
+  --main-title-color: #ffffff;
+  --cards-tow-background-color: #ffffff;
+  --box-tow-bar: #ffffff;
+  --box-line-wan: #ffffff;
+  --table-container: #ffffff;
+}
+
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-background-color: #f0f0f0;
+  --sidebar-background-color: #f0f0f0;
+  --main-title-color: #000000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.header {
+  background-color: var(--header-background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebar {
+  background-color: var(--sidebar-background-color);
+}
+
+.main-container {
+  background-color: var(--background-color);
+}
+
+.box-wan,
+.box-tow-bar,
+.box-tree,
+.box-line-wan {
+  background-color: var(--card-background-color);
+}
+
+.selectBox,
+.multiselect label {
+  color: var(--text-color);
+}
+
+.main-title h2 {
+  color: var(--main-title-color);
+}
+
+.box-tow-bar {
+  background-color: #ffffff;
+}
+
+.box-line-wan {
+  background-color: #ffffff;
+}
+
+.table-container {
+  background-color: #ffffff;
+}
+
+.toggle-icon {
+  font-size: 24px;
+  cursor: pointer;
 }

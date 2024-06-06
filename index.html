@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <!-- Montserrat Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <!-- Material Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
@@ -16,35 +13,30 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <!-- data table css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css"
-    />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
   </head>
-  <body>
+  <body data-theme="dark">
     <div class="grid-container">
       <!-- Header -->
       <header class="header">
         <div class="menu-icon" onclick="openSidebar()">
           <span class="material-icons-outlined">menu</span>
         </div>
+        <div class="toggle-icon" onclick="toggleTheme()">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </div>
       </header>
       <!-- End Header -->
       <!-- Sidebar -->
-      <aside id="sidebar">
+      <aside id="sidebar" class="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
             <img src="images/l-spdh.png" alt="logo" class="bold-image"></img>
             Team 5
           </div>
-          <span class="material-icons-outlined" onclick="closeSidebar()"
-            >close</span
-          >
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
@@ -82,12 +74,8 @@
               <div class="overSelect"></div>
             </div>
             <div id="checkboxesYear">
-              <label for="2015">
-                <input type="checkbox" id="2015" value="2015" />2015</label
-              >
-              <label for="2016">
-                <input type="checkbox" id="2016" value="2016" />2016</label
-              >
+              <label for="2015"><input type="checkbox" id="2015" value="2015" />2015</label>
+              <label for="2016"><input type="checkbox" id="2016" value="2016" />2016</label>
             </div>
           </div>
           <div class="multiselect">
@@ -98,86 +86,12 @@
               <div class="overSelect"></div>
             </div>
             <div id="checkboxesCountry">
-              <label for="Australia">
-                <input
-                  type="checkbox"
-                  id="Australia"
-                  value="Australia"
-                />Australia</label
-              >
-              <label for="Canada">
-                <input
-                  type="checkbox"
-                  id="Canada"
-                  value="Canada"
-                />Canada</label
-              >
-              <label for="France">
-                <input
-                  type="checkbox"
-                  id="France"
-                  value="France"
-                />France</label
-              >
-              <label for="Germany">
-                <input
-                  type="checkbox"
-                  id="Germany"
-                  value="Germany"
-                />Germany</label
-              >
-              <label for="United Kingdom">
-                <input
-                  type="checkbox"
-                  id="United Kingdom"
-                  value="United Kingdom"
-                />United Kingdom</label
-              >
-              <label for="United States">
-                <input
-                  type="checkbox"
-                  id="United States"
-                  value="United States"
-                />United States</label
-              >
-            </div>
-          </div>
-          <div class="multiselect">
-            <div class="selectBox" id="selectBoxAgeGroup">
-              <select>
-                <option>Select Age Group</option>
-              </select>
-              <div class="overSelect"></div>
-            </div>
-            <div id="checkboxesAgeGroup">
-              <label for="Youth (<25)">
-                <input
-                  type="checkbox"
-                  id="Youth (<25)"
-                  value="Youth (<25)"
-                />Youth (<25)</label
-              >
-              <label for="Young Adults (25-34)">
-                <input
-                  type="checkbox"
-                  id="Young Adults (25-34)"
-                  value="Young Adults (25-34)"
-                />Young Adults (25-34)</label
-              >
-              <label for="Adults (35-64)">
-                <input
-                  type="checkbox"
-                  id="Adults (35-64)"
-                  value="Adults (35-64)"
-                />Adults (35-64)</label
-              >
-              <label for="Seniors (64+)">
-                <input
-                  type="checkbox"
-                  id="Seniors (64+)"
-                  value="Seniors (64+)"
-                />Seniors (64+)</label
-              >
+              <label for="Australia"><input type="checkbox" id="Australia" value="Australia" />Australia</label>
+              <label for="Canada"><input type="checkbox" id="Canada" value="Canada" />Canada</label>
+              <label for="France"><input type="checkbox" id="France" value="France" />France</label>
+              <label for="Germany"><input type="checkbox" id="Germany" value="Germany" />Germany</label>
+              <label for="United Kingdom"><input type="checkbox" id="United Kingdom" value="United Kingdom" />United Kingdom</label>
+              <label for="United States"><input type="checkbox" id="United States" value="United States" />United States</label>
             </div>
           </div>
           <div class="multiselect">
@@ -188,23 +102,9 @@
               <div class="overSelect"></div>
             </div>
             <div id="checkboxesProductCategory">
-              <label for="Accessories">
-                <input
-                  type="checkbox"
-                  id="Accessories"
-                  value="Accessories"
-                />Accessories</label
-              >
-              <label for="Bikes">
-                <input type="checkbox" id="Bikes" value="Bikes" />Bikes</label
-              >
-              <label for="Clothing">
-                <input
-                  type="checkbox"
-                  id="Clothing"
-                  value="Clothing"
-                />Clothing</label
-              >
+              <label for="Accessories"><input type="checkbox" id="Accessories" value="Accessories" />Accessories</label>
+              <label for="Bikes"><input type="checkbox" id="Bikes" value="Bikes" />Bikes</label>
+              <label for="Clothing"><input type="checkbox" id="Clothing" value="Clothing" />Clothing</label>
             </div>
           </div>
         </div>
@@ -246,9 +146,7 @@
           </div>
           <div class="cards-tow">
             <div class="box-tow-bar">
-              <div class="box-title-tow">
-                Sales by Product Category and Country
-              </div>
+              <div class="box-title-tow">Sales by Product Category and Country</div>
               <canvas id="salesChart"></canvas>
               <div id="bar-grub"></div>
             </div>
@@ -263,14 +161,8 @@
         <div class="main-line">
           <div class="cards-line-wan">
             <div class="box-line-wan">
-              <div class="box-line-title">
-                Gender Distribution by Country and Revenue
-              </div>
-              <canvas
-                id="distributionChart"
-                width="600px"
-                height="400px"
-              ></canvas>
+              <div class="box-line-title">Gender Distribution by Country and Revenue</div>
+              <canvas id="distributionChart" width="600px" height="400px"></canvas>
             </div>
           </div>
           <div class="table-container">
@@ -286,20 +178,13 @@
     <!-- Scripts -->
     <!-- ApexCharts -->
     <!--data table script-->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <!--Apexcharts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript"></script>
 
     <!-- Custom JS -->
@@ -311,5 +196,7 @@
     <script src="js/bar-line-y.js"></script>
     <script src="js/table.js"></script>
     <script src="js/scoreCard.js"></script>
+    <script src="js/toggle.js"></script>
+
   </body>
 </html>
