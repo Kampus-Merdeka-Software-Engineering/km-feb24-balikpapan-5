@@ -12,4 +12,4 @@ function toggleTheme() {
     themeIcon.classList.add('fa-moon');
     }
 }
-//toggle theme //
+

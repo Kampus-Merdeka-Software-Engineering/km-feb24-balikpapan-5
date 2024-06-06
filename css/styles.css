@@ -722,6 +722,7 @@ diganti jd 936px */
 }
 
 /* light and dark mode*/
+/* dark*/
 :root {
   --background-color: #121212;
   --text-color: #ffffff;
@@ -734,7 +735,7 @@ diganti jd 936px */
   --box-line-wan: #ffffff;
   --table-container: #ffffff;
 }
-
+/* light*/
 [data-theme="light"] {
   --background-color: #ffffff;
   --text-color: #000000;
