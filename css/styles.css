@@ -227,6 +227,35 @@ body {
   background-color: #31bacb;
 }
 
+.selectBoxAgeGroup {
+  position: relative;
+}
+
+#selectBoxAgeGroup select {
+  height: 42px;
+  width: 180px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+#checkboxesAgeGroup {
+  display: none;
+  border: 1px #dadada solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#checkboxesAgeGroup label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
 
 #checkboxesCountry label:hover {
   background-color: #31bacb;
@@ -767,3 +796,4 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
+  
