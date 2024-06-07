@@ -10,6 +10,7 @@ body {
   font-size: 27px;
   margin-left: 10px;
 }
+
 .material-icons-outlined {
   vertical-align: middle;
   line-height: 1px;
@@ -77,10 +78,9 @@ body {
 .sidebar-brand img {
   width: 55px; /* Atur lebar gambar */
   height: auto; /* Atur ketinggian gambar agar proporsi tidak rusak */
-  margin-right: 10
-  px; /* Atur margin kanan agar ada jarak antara gambar dan teks */
+  margin-right: 10 px; /* Atur margin kanan agar ada jarak antara gambar dan teks */
 }
-.bold-image{
+.bold-image {
   filter: contrast(200%);
 }
 
@@ -309,14 +309,14 @@ body {
   margin-bottom: 20px;
 }
 
-.cards-wan {
+.cardsone {
   padding: 10px;
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.box-wan {
+.boxone {
   background-color: #31bacb;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -330,12 +330,12 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.cards-wan .box-wan:hover {
-  background-color: #0093a7;
+.cardsone .boxone:hover {
+  background-color: #053f47;
   cursor: pointer;
 }
 
-.main-wan-title {
+.mainone-title {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -349,12 +349,12 @@ body {
   font-weight: bold;
 }
 
-.cards-tow {
+.cardstwo {
   /* width: 100%; */
   padding: 0.6rem;
   /* background: violet; */
 }
-.box-tow-bar {
+.boxtwo-bar {
   border: 2px solid black;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -364,7 +364,7 @@ body {
   padding: 0.8rem;
   position: relative;
 }
-.box-title-tow {
+.box-titletwo {
   background-color: #d9d9d9;
   color: rgb(237, 76, 103);
   padding: 3px 13px;
@@ -380,14 +380,14 @@ body {
   font-size: 16px;
 }
 
-.cards-tree {
+.cardsthree {
   padding: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.box-tree {
+.boxthree {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -397,7 +397,7 @@ body {
   border-radius: 5px;
 }
 
-.box-tree p {
+.boxthree p {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -407,14 +407,14 @@ body {
   border-radius: 5px;
   background-color: #ffffff;
 }
-.cards-line-wan {
+.cards-lineone {
   /* padding: 20px;
   background-color: aqua; */
   margin-bottom: 20px;
   padding: 0.6rem;
 }
 
-.box-line-wan {
+.box-lineone {
   padding: 3px 13px;
   border: 2px solid black;
   border-radius: 5px;
@@ -543,8 +543,6 @@ table {
   color: black;
 }
 
-
-
 @media screen and (max-width: 1280px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -580,13 +578,13 @@ diganti jd 936px */
     flex-wrap: wrap;
     gap: 30px;
   }
-  .cards-wan {
+  .cardsone {
     flex-direction: row;
   }
-  .cards-tree {
+  .cardsthree {
     font-size: 2rem;
   }
-  .box-wan {
+  .boxone {
     padding: 1rem;
     gap: 5px;
     margin-right: 15px;
@@ -597,7 +595,7 @@ diganti jd 936px */
   /* .main-title-number{
     font-size: 0.6rem;
   } */
-  .main-wan-title {
+  .mainone-title {
     font-size: 1.5rem;
   }
   .main-title-icon i {
@@ -619,25 +617,34 @@ diganti jd 936px */
     font-size: 0.9rem;
     top: -10px;
   }
-  .box-title-tow {
+  .box-titletwo {
     font-size: 0.9rem;
     left: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  .main-cards, .cards-tow, .cards-tree, .main-line, .cards-line-wan, .cards-line-tow {
+  .main-cards,
+  .cardstwo,
+  .cardsthree,
+  .main-line,
+  .cards-lineone,
+  .cards-linetwo {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .cards-tree{
+  .cardsthree {
     width: 100%;
   }
-  .box-wan, .box-tow-bar, .box-tree, .box-line-wan, .table-container {
+  .boxone,
+  .boxtwo-bar,
+  .boxthree,
+  .box-lineone,
+  .table-container {
     width: 100%;
   }
-  .main-wan-title .box-title {
+  .mainone-title .box-title {
     font-size: 1rem;
   }
   .main-title-number {
@@ -657,31 +664,32 @@ diganti jd 936px */
   .hedaer-left {
     display: none;
   }
-  .box-line-wan {
+  .box-lineone {
     font-size: 0.4rem;
     top: 10px;
   }
   .box-line-title {
     font-size: 0.6rem;
   }
-  .main-wan-title .box-title {
+  .mainone-title .box-title {
     font-size: 0.9rem;
   }
-  .cards-wan{
-    flex-wrap:wrap;
-    }
-  .box-wan{
+  .cardsone {
+    flex-wrap: wrap;
+  }
+  .boxone {
     margin-right: 0;
   }
   .main-title-number {
     font-size: 1rem;
   }
-  .box-title-tow, .box-line-title {
+  .box-titletwo,
+  .box-line-title {
     font-size: 14px;
     padding: 2px 10px;
     top: -10px;
   }
-  .box-tree p {
+  .boxthree p {
     font-size: 0.9rem;
   }
   .table-container h1 {
@@ -691,34 +699,37 @@ diganti jd 936px */
   table {
     font-size: 10px;
   }
-  .main-wan-title .box-title {
+  .mainone-title .box-title {
     font-size: 0.9rem;
   }
   .main-title-number {
     font-size: 1rem;
   }
 
-  .box-title-tow {
+  .box-titletwo {
     font-size: 14px;
     padding: 3px 8px;
   }
-  .cards-tow{
+  .cardstwo {
     height: 100%;
     width: fit-content;
   }
-  .cards-tree{
+  .cardsthree {
     width: 100%;
   }
 }
 
 /* Extra Extra small */
-@media (max-width: 390px){
-  .filtering-container{
+@media (max-width: 390px) {
+  .filtering-container {
     gap: 15px;
   }
-  #selectBoxAgeGroup select, #selectBoxYear select, #selectBoxCountry select, #selectBoxProductCategory select{
-  width: 166px;
-}
+  #selectBoxAgeGroup select,
+  #selectBoxYear select,
+  #selectBoxCountry select,
+  #selectBoxProductCategory select {
+    width: 166px;
+  }
 }
 
 /* light and dark mode*/
@@ -726,21 +737,21 @@ diganti jd 936px */
 :root {
   --background-color: #121212;
   --text-color: #ffffff;
-  --card-background-color: #0093a7;
+  --card-background-color: #31bacb;
   --header-background-color: #1a1a1a;
   --sidebar-background-color: #1a1a1a;
   --main-title-color: #ffffff;
-  --cards-tow-background-color: #ffffff;
-  --box-tow-bar: #ffffff;
-  --box-line-wan: #ffffff;
+  --cardstwo-background-color: #ffffff;
+  --boxtwo-bar: #ffffff;
+  --box-lineone: #ffffff;
   --table-container: #ffffff;
 }
-/* light*/
-[data-theme="light"] {
-  --background-color: #ffffff;
+/* dark*/
+[data-theme="dark"] {
+  --background-color: #f7f8f8;
   --text-color: #000000;
   --header-background-color: #f0f0f0;
-  --sidebar-background-color: #f0f0f0;
+  --sidebar-background-color: #332f2f;
   --main-title-color: #000000;
 }
 
@@ -765,10 +776,10 @@ body {
   background-color: var(--background-color);
 }
 
-.box-wan,
-.box-tow-bar,
-.box-tree,
-.box-line-wan {
+.boxone,
+.boxtwo-bar,
+.boxthree,
+.box-lineone {
   background-color: var(--card-background-color);
 }
 
@@ -781,11 +792,11 @@ body {
   color: var(--main-title-color);
 }
 
-.box-tow-bar {
+.boxtwo-bar {
   background-color: #ffffff;
 }
 
-.box-line-wan {
+.box-lineone {
   background-color: #ffffff;
 }
 
@@ -797,4 +808,3 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
-  
