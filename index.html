@@ -4,16 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://www.pngfind.com/pngs/m/55-550433_holo-holographic-shootingstar-stars-star-emoji-iridesce-vaporwave.png"
-    />
     <!-- Montserrat Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <!-- Material Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
@@ -21,17 +13,11 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <!-- data table css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css"
-    />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
   </head>
-  <body data-theme="dark">
+  <body data-theme="light">
     <div class="grid-container">
       <!-- Header -->
       <header class="header">
@@ -47,12 +33,10 @@
       <aside id="sidebar" class="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
-            <img src="images/l-spdh.png" alt="logo" class="bold-image" />
+            <img src="images/l-spdh.png" alt="logo" class="bold-image"></img>
             Team 5
           </div>
-          <span class="material-icons-outlined" onclick="closeSidebar()"
-            >close</span
-          >
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
@@ -79,7 +63,7 @@
       <!-- Main -->
       <main class="main-container">
         <div class="main-title">
-          <h2>BIKE SALES DASHBOARD</h2>
+          <h2>DASHBOARD</h2>
         </div>
         <div class="filtering-container">
           <div class="multiselect">
@@ -90,12 +74,8 @@
               <div class="overSelect"></div>
             </div>
             <div id="checkboxesYear">
-              <label for="2015"
-                ><input type="checkbox" id="2015" value="2015" />2015</label
-              >
-              <label for="2016"
-                ><input type="checkbox" id="2016" value="2016" />2016</label
-              >
+              <label for="2015"><input type="checkbox" id="2015" value="2015" />2015</label>
+              <label for="2016"><input type="checkbox" id="2016" value="2016" />2016</label>
             </div>
           </div>
           <div class="multiselect">
@@ -106,48 +86,12 @@
               <div class="overSelect"></div>
             </div>
             <div id="checkboxesCountry">
-              <label for="Australia"
-                ><input
-                  type="checkbox"
-                  id="Australia"
-                  value="Australia"
-                />Australia</label
-              >
-              <label for="Canada"
-                ><input
-                  type="checkbox"
-                  id="Canada"
-                  value="Canada"
-                />Canada</label
-              >
-              <label for="France"
-                ><input
-                  type="checkbox"
-                  id="France"
-                  value="France"
-                />France</label
-              >
-              <label for="Germany"
-                ><input
-                  type="checkbox"
-                  id="Germany"
-                  value="Germany"
-                />Germany</label
-              >
-              <label for="United Kingdom"
-                ><input
-                  type="checkbox"
-                  id="United Kingdom"
-                  value="United Kingdom"
-                />United Kingdom</label
-              >
-              <label for="United States"
-                ><input
-                  type="checkbox"
-                  id="United States"
-                  value="United States"
-                />United States</label
-              >
+              <label for="Australia"><input type="checkbox" id="Australia" value="Australia" />Australia</label>
+              <label for="Canada"><input type="checkbox" id="Canada" value="Canada" />Canada</label>
+              <label for="France"><input type="checkbox" id="France" value="France" />France</label>
+              <label for="Germany"><input type="checkbox" id="Germany" value="Germany" />Germany</label>
+              <label for="United Kingdom"><input type="checkbox" id="United Kingdom" value="United Kingdom" />United Kingdom</label>
+              <label for="United States"><input type="checkbox" id="United States" value="United States" />United States</label>
             </div>
           </div>
           <div class="multiselect">
@@ -158,34 +102,10 @@
               <div class="overSelect"></div>
             </div>
             <div id="checkboxesAgeGroup">
-              <label for="Youth (<25)"
-                ><input
-                  type="checkbox"
-                  id="Youth (<25)"
-                  value="Youth (<25)"
-                />Youth (<25)</label
-              >
-              <label for="Young Adults (25-34)"
-                ><input
-                  type="checkbox"
-                  id="Young Adults (25-34)"
-                  value="Young Adults (25-34)"
-                />Young Adults (25-34)</label
-              >
-              <label for="Adults (35-64)"
-                ><input
-                  type="checkbox"
-                  id="Adults (35-64)"
-                  value="Adults (35-64)"
-                />Adults (35-64)</label
-              >
-              <label for="Seniors (64+)"
-                ><input
-                  type="checkbox"
-                  id="Seniors (64+)"
-                  value="Seniors (64+)"
-                />Seniors (64+)</label
-              >
+              <label for="Youth (<25)"><input type="checkbox" id="Youth (<25)" value="Youth (<25)" />Youth (<25)</label>
+              <label for="Young Adults (25-34)"><input type="checkbox" id="Young Adults (25-34)" value="Young Adults (25-34)" />Young Adults (25-34)</label>
+              <label for="Adults (35-64)"><input type="checkbox" id="Adults (35-64)" value="Adults (35-64)" />Adults (35-64)</label>
+              <label for="Seniors (64+)"><input type="checkbox" id="Seniors (64+)" value="Seniors (64+)" />Seniors (64+)</label>
             </div>
           </div>
           <div class="multiselect">
@@ -196,30 +116,16 @@
               <div class="overSelect"></div>
             </div>
             <div id="checkboxesProductCategory">
-              <label for="Accessories"
-                ><input
-                  type="checkbox"
-                  id="Accessories"
-                  value="Accessories"
-                />Accessories</label
-              >
-              <label for="Bikes"
-                ><input type="checkbox" id="Bikes" value="Bikes" />Bikes</label
-              >
-              <label for="Clothing"
-                ><input
-                  type="checkbox"
-                  id="Clothing"
-                  value="Clothing"
-                />Clothing</label
-              >
+              <label for="Accessories"><input type="checkbox" id="Accessories" value="Accessories" />Accessories</label>
+              <label for="Bikes"><input type="checkbox" id="Bikes" value="Bikes" />Bikes</label>
+              <label for="Clothing"><input type="checkbox" id="Clothing" value="Clothing" />Clothing</label>
             </div>
           </div>
         </div>
         <div class="main-cards">
-          <div class="cardsone">
-            <div class="boxone">
-              <div class="mainone-title">
+          <div class="cards-wan">
+            <div class="box-wan">
+              <div class="main-wan-title">
                 <div class="main-title-number">
                   <div class="box-title">Revenue</div>
                   <div class="main-title-number" id="revenue"></div>
@@ -229,8 +135,8 @@
                 </div>
               </div>
             </div>
-            <div class="boxone">
-              <div class="mainone-title">
+            <div class="box-wan">
+              <div class="main-wan-title">
                 <div class="main-title-number">
                   <div class="box-title">Profit</div>
                   <div class="main-title-number" id="profit"></div>
@@ -240,8 +146,8 @@
                 </div>
               </div>
             </div>
-            <div class="boxone">
-              <div class="mainone-title">
+            <div class="box-wan">
+              <div class="main-wan-title">
                 <div class="main-title-number">
                   <div class="box-title">Item Sold</div>
                   <div class="main-title-number" id="itemSold"></div>
@@ -252,39 +158,42 @@
               </div>
             </div>
           </div>
-          <div class="cardstwo">
-            <div class="boxtwo-bar">
-              <div class="box-titletwo">
-                Sales by Product Category and Country
-              </div>
+          <div class="cards-tow">
+            <div class="box-tow-bar">
+              <div class="box-title-tow">Sales by Product Category and Country</div>
               <canvas id="salesChart"></canvas>
-              <div
-                class="cards-two"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-duration="1000"
-              ></div>
               <div id="bar-grub"></div>
             </div>
           </div>
-          <div class="cardsthree">
-            <div class="boxthree">
+          <div class="cards-tree">
+            <div class="box-tree">
               <p>Age Group Distribution by Revenue</p>
               <div class="box-pie-chart" id="pie-chart"></div>
             </div>
           </div>
         </div>
         <div class="main-line">
-          <div class="cards-lineone">
-            <div class="box-lineone">
-              <div class="box-line-title">
-                Gender Distribution by Country and Revenue
+          <div class="cards-line-wan">       
+            <div class="box-line-wan">
+
+              
+              <div class="box-line-title">Distribution by Country and Revenue</div>
+              <canvas id="distributionChart" width="600px" height="400px"></canvas>
+              <button class="insight-button">INSIGHT</button>
+              <div class="text-area-hover">
+                <strong>Chart diatas menunjukkan perbedaan pendisribusian product bikes berdasarkan Customer Gender di Negara-negara Eropa</strong>
+                <br>
+                <strong>•</strong> Pada tahun 2015-2016 customer dengan <strong>Gender Female</strong> di <strong>Australia dan Germany</strong> mengalami <strong>penurunan yang signifikan</strong>
+                <br>
+                <strong>•</strong> Pada tahun 2015-2016 customer dengan <strong>Gender Male</strong> di <strong>Canada dan Germany</strong> mengalami <strong>peningkatan yang signifikan.</strong>
+                <br>
+                <strong>•</strong> Secara <strong>Keseluruhan</strong>, terjadi <strong>peningkatan jumlah Female</strong> dari tahun 2015-2016 <strong>sementara</strong> customer dengan <strong>Gender Male</strong> mengalami penurunan. Hal ini dapat menunjukan <strong>pergeseran demografis</strong> atau <strong>tren</strong> dalam <strong>penggunaan produk atau layanan tertentu di berbagai negara</strong>
+                <br>
+                <strong>•</strong> <strong>United States</strong> menjadi <strong>Negara</strong> yang memiliki <strong>potensi pasar</strong> yang <strong>besar</strong> karena <strong>memiliki</strong> jumlah <strong>customer female dan male</strong> terbesar dari tahun 2015-2016.
+                <br>
+                <strong>•</strong> Terdapat <strong>perbedaan</strong> yang signifikan dalam distribusi berdasarkan <strong>Gender</strong> di antara negara-negara <strong>Eropa</strong> ini, menyoroti <strong>kompleksitas</strong> dan <strong>keragaman pasar global</strong> dalam hal <strong>preferensi konsumen berdasarkan Gender</strong>.
               </div>
-              <canvas
-                id="distributionChart"
-                width="600px"
-                height="400px"
-              ></canvas>
+              
             </div>
           </div>
           <div class="table-container">
@@ -300,20 +209,13 @@
     <!-- Scripts -->
     <!-- ApexCharts -->
     <!--data table script-->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <!--Apexcharts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript"></script>
 
     <!-- Custom JS -->
@@ -325,6 +227,6 @@
     <script src="js/bar-line-y.js"></script>
     <script src="js/table.js"></script>
     <script src="js/scoreCard.js"></script>
-    <script src="js/toggle.js"></script>
+
   </body>
 </html>
