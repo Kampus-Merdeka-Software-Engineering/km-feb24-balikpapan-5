@@ -17,7 +17,7 @@
     <!-- data table css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
   </head>
-  <body data-theme="dark">
+  <body data-theme="light">
     <div class="grid-container">
       <!-- Header -->
       <header class="header">
@@ -173,10 +173,27 @@
           </div>
         </div>
         <div class="main-line">
-          <div class="cards-line-wan">
+          <div class="cards-line-wan">       
             <div class="box-line-wan">
-              <div class="box-line-title">Gender Distribution by Country and Revenue</div>
+
+              
+              <div class="box-line-title">Distribution by Country and Revenue</div>
               <canvas id="distributionChart" width="600px" height="400px"></canvas>
+              <button class="insight-button">INSIGHT</button>
+              <div class="text-area-hover">
+                <strong>Chart diatas menunjukkan perbedaan pendisribusian product bikes berdasarkan Customer Gender di Negara-negara Eropa</strong>
+                <br>
+                <strong>•</strong> Pada tahun 2015-2016 customer dengan <strong>Gender Female</strong> di <strong>Australia dan Germany</strong> mengalami <strong>penurunan yang signifikan</strong>
+                <br>
+                <strong>•</strong> Pada tahun 2015-2016 customer dengan <strong>Gender Male</strong> di <strong>Canada dan Germany</strong> mengalami <strong>peningkatan yang signifikan.</strong>
+                <br>
+                <strong>•</strong> Secara <strong>Keseluruhan</strong>, terjadi <strong>peningkatan jumlah Female</strong> dari tahun 2015-2016 <strong>sementara</strong> customer dengan <strong>Gender Male</strong> mengalami penurunan. Hal ini dapat menunjukan <strong>pergeseran demografis</strong> atau <strong>tren</strong> dalam <strong>penggunaan produk atau layanan tertentu di berbagai negara</strong>
+                <br>
+                <strong>•</strong> <strong>United States</strong> menjadi <strong>Negara</strong> yang memiliki <strong>potensi pasar</strong> yang <strong>besar</strong> karena <strong>memiliki</strong> jumlah <strong>customer female dan male</strong> terbesar dari tahun 2015-2016.
+                <br>
+                <strong>•</strong> Terdapat <strong>perbedaan</strong> yang signifikan dalam distribusi berdasarkan <strong>Gender</strong> di antara negara-negara <strong>Eropa</strong> ini, menyoroti <strong>kompleksitas</strong> dan <strong>keragaman pasar global</strong> dalam hal <strong>preferensi konsumen berdasarkan Gender</strong>.
+              </div>
+              
             </div>
           </div>
           <div class="table-container">
@@ -210,6 +227,6 @@
     <script src="js/bar-line-y.js"></script>
     <script src="js/table.js"></script>
     <script src="js/scoreCard.js"></script>
-    <script src="js/toggle.js"></script>
+
   </body>
 </html>

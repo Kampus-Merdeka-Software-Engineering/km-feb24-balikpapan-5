@@ -162,3 +162,23 @@ document
       }
     });
   });
+
+  //buttom insight 
+  document.addEventListener('DOMContentLoaded', function() {
+    const insightButton = document.querySelector('.insight-button');
+    const textArea = document.querySelector('.text-area-hover');
+  
+    textArea.style.display = 'none';
+    insightButton.textContent = 'SHOW INSIGHT';
+  
+    insightButton.addEventListener('click', function() {
+      if (textArea.style.display === 'none' || textArea.style.display === '') {
+        textArea.style.display = 'block';
+        insightButton.textContent = 'HIDE INSIGHT';
+      } else {
+        textArea.style.display = 'none';
+        insightButton.textContent = 'SHOW INSIGHT';
+      }
+    });
+  });
+  

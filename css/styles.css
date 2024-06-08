@@ -256,6 +256,37 @@ body {
   color: black;
   font-size: 13px;
 }
+.selectBoxSubCategory {
+  position: relative;
+}
+#selectBoxSubCategory select {
+  height: 42px;
+  width: 180px;
+  border-radius: 7px;
+  color: #9e9ea4;
+}
+
+#checkboxesSubCategory {
+  display: none;
+  border: 1px #fff9f9 solid;
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 20%;
+  border-radius: 4px;
+  padding: 6px;
+}
+#checkboxesSubCategory label {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+#checkboxesSubCategory label:hover {
+  background-color: #31bacb;
+}
+
 
 #checkboxesCountry label:hover {
   background-color: #31bacb;
@@ -723,6 +754,15 @@ diganti jd 936px */
 
 /* light and dark mode*/
 /* dark*/
+
+/* light*/
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-background-color: #f0f0f0;
+  --sidebar-background-color: #f0f0f0;
+  --main-title-color: #000000;
+}
 :root {
   --background-color: #121212;
   --text-color: #ffffff;
@@ -734,14 +774,6 @@ diganti jd 936px */
   --box-tow-bar: #ffffff;
   --box-line-wan: #ffffff;
   --table-container: #ffffff;
-}
-/* light*/
-[data-theme="light"] {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --header-background-color: #f0f0f0;
-  --sidebar-background-color: #f0f0f0;
-  --main-title-color: #000000;
 }
 
 body {
@@ -796,5 +828,34 @@ body {
 .toggle-icon {
   font-size: 24px;
   cursor: pointer;
+}
+
+.insight-button {
+  padding: 10px 20px;
+  background-color: #306cd2;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+.insight-button:hover {
+  background-color: #0a131c;
+}
+.text-area-hover {
+  display: none;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+  text-align: justify;
+  width: 100%;
+  color: #000000;
+  margin-top: 10px;
+}
+.box-line-wan:hover .text-area-hover {
+  display: block;
 }
   
