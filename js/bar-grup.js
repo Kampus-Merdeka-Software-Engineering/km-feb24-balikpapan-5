@@ -154,3 +154,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+//button insight bar grup chart
+document.addEventListener('DOMContentLoaded', function() {
+  const insightButton = document.querySelector('.insight-button-bargrup');
+  const textAreaBarChart = document.querySelector('.text-area-bargrup');
+
+  textAreaBarChart.style.display = 'none';
+  insightButton.textContent = 'Insight';
+
+  insightButton.addEventListener('click', function() {
+    if (textAreaBarChart.style.display === 'none' || textAreaBarChart.style.display === '') {
+      textAreaBarChart.style.display = 'block';
+    } else {
+      textAreaBarChart.style.display = 'none';
+    }
+  });
+});
