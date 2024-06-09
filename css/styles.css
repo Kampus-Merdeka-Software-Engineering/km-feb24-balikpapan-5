@@ -381,9 +381,7 @@ body {
 }
 
 .cards-tow {
-  /* width: 100%; */
   padding: 0.6rem;
-  /* background: violet; */
 }
 .box-tow-bar {
   border: 2px solid black;
@@ -409,6 +407,36 @@ body {
   -o-border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
+}
+.button-bargrup {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.insight-button-bargrup {
+  padding: 10px 20px;
+  width: 90px;
+  font-size: 15px;
+  background-color:#31bacb;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.insight-button-bargrup:hover {
+  background-color: #0a131c; /* Change to black on hover */
+}
+.text-area-bargrup{
+  display: none; /* Initially hidden */
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: justify;
+  color: #000000;
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 .cards-tree {
@@ -480,8 +508,6 @@ body {
 }
 
 .cards-line-wan {
-  /* padding: 20px;
-  background-color: aqua; */
   margin-bottom: 20px;
   padding: 0.6rem;
 }
@@ -639,8 +665,7 @@ table {
   }
 }
 
-/* Small <= 768px 
-diganti jd 936px */
+
 
 @media screen and (max-width: 1000px) {
   .main-cards {
@@ -666,9 +691,7 @@ diganti jd 936px */
   .box-title {
     font-size: 1.5rem;
   }
-  /* .main-title-number{
-    font-size: 0.6rem;
-  } */
+ 
   .main-wan-title {
     font-size: 1.5rem;
   }
