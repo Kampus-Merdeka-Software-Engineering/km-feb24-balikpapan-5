@@ -92,3 +92,14 @@ function drawChart() {
 
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
+
+// insight button
+function showHideComposition() {
+  let chart_pie = document.getElementById("insightPieChart");
+
+  if (chart_pie.style.display === "none" || chart_pie.style.display === "") {
+    chart_pie.style.display = "flex";
+  } else {
+    chart_pie.style.display = "none";
+  }
+}
