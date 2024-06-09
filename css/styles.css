@@ -438,6 +438,47 @@ body {
   border-radius: 5px;
   background-color: #ffffff;
 }
+
+.button-piechart {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#insightPieChart {
+  display: none; /* Initially hidden */
+  justify-content: center;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#infopiechart {
+  border: none;
+  color: #fff;
+  background-color: #31bacb;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 80px;
+  height: 25px;
+}
+
+#infopiechart:hover {
+  background-color: #000; /* Change to black on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
 .cards-line-wan {
   /* padding: 20px;
   background-color: aqua; */
@@ -832,7 +873,7 @@ body {
 
 .insight-button {
   padding: 10px 20px;
-  background-color: #306cd2;
+  background-color: #31bacb;;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -854,6 +895,7 @@ body {
   width: 100%;
   color: #000000;
   margin-top: 10px;
+  font-size: 13px;
 }
 .box-line-wan:hover .text-area-hover {
   display: block;
