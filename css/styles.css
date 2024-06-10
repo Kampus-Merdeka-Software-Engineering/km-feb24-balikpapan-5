@@ -138,7 +138,12 @@ body {
 }
 
 /*filtering*/
+.filtering-container h2 {
+  color: black;
+  text-align: top;
+}
 .filtering-container {
+  margin-top: 20px;
   display: flex;
   margin-left: -50px;
   justify-content: space-around;
@@ -763,8 +768,19 @@ table {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .main-title {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+}
+
 /*Extra Small */
 @media screen and (max-width: 480px) {
+  .main-title {
+    font-size: 15px;
+    margin-left: 10px;
+  }
   .hedaer-left {
     display: none;
   }
