@@ -165,19 +165,19 @@ document
 
   //buttom insight 
   document.addEventListener('DOMContentLoaded', function() {
-    const insightButton = document.querySelector('.insight-button');
+    const insightButton = document.querySelector('.insight-button-bar-line');
     const textArea = document.querySelector('.text-area-hover');
   
     textArea.style.display = 'none';
-    insightButton.textContent = 'SHOW INSIGHT';
+    insightButton.textContent = 'Insight';
   
     insightButton.addEventListener('click', function() {
       if (textArea.style.display === 'none' || textArea.style.display === '') {
         textArea.style.display = 'block';
-        insightButton.textContent = 'HIDE INSIGHT';
+        insightButton.textContent = 'Insight';
       } else {
         textArea.style.display = 'none';
-        insightButton.textContent = 'SHOW INSIGHT';
+        insightButton.textContent = 'Insight';
       }
     });
   });

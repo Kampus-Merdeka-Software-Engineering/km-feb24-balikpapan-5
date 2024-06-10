@@ -544,6 +544,42 @@ body {
   font-weight: bold;
   font-size: 16px;
 }
+.insight-button-bar-line{
+  padding: 10px 20px;
+  background-color: #30b6c8;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+  text-align: justify;
+  margin: 0 auto;
+  display: block;
+
+}
+.insight-button-bar-line:hover {
+  background-color: #083a41;
+}
+.text-area-hover {
+  display: none;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+  text-align: justify;
+  width: 100%;
+  color: #000000;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.box-line-one:hover .text-area-hover {
+  display: block;
+}
+
+
 
 table {
   color: black;
@@ -938,32 +974,3 @@ body {
   cursor: pointer;
 }
 
-.insight-button {
-  padding: 10px 20px;
-  background-color: #31bacb;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease;
-}
-.insight-button:hover {
-  background-color: #083a41;
-}
-.text-area-hover {
-  display: none;
-  padding: 5px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: none;
-  text-align: justify;
-  width: 100%;
-  color: #000000;
-  margin-top: 10px;
-  font-size: 13px;
-}
-.box-line-one:hover .text-area-hover {
-  display: block;
-}
