@@ -77,10 +77,9 @@ body {
 .sidebar-brand img {
   width: 55px; /* Atur lebar gambar */
   height: auto; /* Atur ketinggian gambar agar proporsi tidak rusak */
-  margin-right: 10
-  px; /* Atur margin kanan agar ada jarak antara gambar dan teks */
+  margin-right: 10 px; /* Atur margin kanan agar ada jarak antara gambar dan teks */
 }
-.bold-image{
+.bold-image {
   filter: contrast(200%);
 }
 
@@ -141,6 +140,7 @@ body {
 /*filtering*/
 .filtering-container {
   display: flex;
+  margin-left: -50px;
   justify-content: space-around;
   width: 100%;
   cursor: initial;
@@ -287,7 +287,6 @@ body {
   background-color: #31bacb;
 }
 
-
 #checkboxesCountry label:hover {
   background-color: #31bacb;
 }
@@ -340,14 +339,14 @@ body {
   margin-bottom: 20px;
 }
 
-.cards-wan {
+.cards-one {
   padding: 10px;
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.box-wan {
+.box-one {
   background-color: #31bacb;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -361,12 +360,12 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.cards-wan .box-wan:hover {
-  background-color: #0093a7;
+.cards-one .box-one:hover {
+  background-color: #083a41;
   cursor: pointer;
 }
 
-.main-wan-title {
+.main-one-title {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -380,10 +379,14 @@ body {
   font-weight: bold;
 }
 
-.cards-tow {
-  padding: 0.6rem;
+.cards-two {
+  padding: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.box-tow-bar {
+.box-two-bar {
   border: 2px solid black;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -393,9 +396,9 @@ body {
   padding: 0.8rem;
   position: relative;
 }
-.box-title-tow {
-  background-color: #d9d9d9;
-  color: rgb(237, 76, 103);
+.box-title-two {
+  background-color: #ececec;
+  color: #0a4b62;
   padding: 3px 13px;
   position: absolute;
   top: -12px;
@@ -417,7 +420,7 @@ body {
   padding: 10px 20px;
   width: 90px;
   font-size: 15px;
-  background-color:#31bacb;
+  background-color: #31bacb;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -425,9 +428,9 @@ body {
   transition: background-color 0.3s ease;
 }
 .insight-button-bargrup:hover {
-  background-color: #0a131c; /* Change to black on hover */
+  background-color: #083a41; /* Change color on hover */
 }
-.text-area-bargrup{
+.text-area-bargrup {
   display: none; /* Initially hidden */
   padding: 5px;
   background-color: #fff;
@@ -439,14 +442,14 @@ body {
   font-size: 13px;
 }
 
-.cards-tree {
+.cards-three {
   padding: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.box-tree {
+.box-three {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -456,7 +459,7 @@ body {
   border-radius: 5px;
 }
 
-.box-tree p {
+.box-three p {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -496,7 +499,7 @@ body {
 }
 
 #infopiechart:hover {
-  background-color: #000; /* Change to black on hover */
+  background-color: #083a41; /* Change color on hover */
 }
 
 .hidden {
@@ -507,12 +510,11 @@ body {
   display: flex;
 }
 
-.cards-line-wan {
-  margin-bottom: 20px;
+.cards-line-one {
   padding: 0.6rem;
 }
 
-.box-line-wan {
+.box-line-one {
   padding: 3px 13px;
   border: 2px solid black;
   border-radius: 5px;
@@ -524,9 +526,9 @@ body {
   position: relative;
 }
 .box-line-title {
-  background-color: #d9d9d9;
+  background-color: #ececec;
   padding: 3px 13px;
-  color: rgb(237, 76, 103);
+  color: #0a4b62;
   position: absolute;
   top: -15px;
   border-radius: 5px;
@@ -540,7 +542,7 @@ body {
 
 table {
   color: black;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .table-container {
@@ -556,11 +558,11 @@ table {
 
 .table-container h1 {
   text-align: center;
-  margin-bottom: 10px;
-  color: rgb(237, 76, 103);
-  margin-top: 15;
-  font-size: 17px;
-  background-color: #d9d9d9;
+  margin-bottom: 8px;
+  color: #0a4b62;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: #ececec;
   border-radius: 5px;
   display: inline-block;
   padding: 10px;
@@ -578,20 +580,16 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   color: black;
 }
-.dt-layout-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0x;
-  color: black;
-}
+
 .dt-layout-cell {
   display: flex;
   align-items: center;
   color: black;
+  font-size: 14px;
+  padding: 3px;
 }
 
 .dt-start {
@@ -641,8 +639,6 @@ table {
   color: black;
 }
 
-
-
 @media screen and (max-width: 1280px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -665,25 +661,23 @@ table {
   }
 }
 
-
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1135px) {
   .main-cards {
     grid-template-columns: 1fr;
     gap: 10px;
     margin-bottom: 0;
   }
   .filtering-container {
-    flex-wrap: wrap;
-    gap: 30px;
+    margin-left: -10px;
+    gap: 15px;
   }
-  .cards-wan {
+  .cards-one {
     flex-direction: row;
   }
-  .cards-tree {
+  .cards-three {
     font-size: 2rem;
   }
-  .box-wan {
+  .box-one {
     padding: 1rem;
     gap: 5px;
     margin-right: 15px;
@@ -691,8 +685,8 @@ table {
   .box-title {
     font-size: 1.5rem;
   }
- 
-  .main-wan-title {
+
+  .main-one-title {
     font-size: 1.5rem;
   }
   .main-title-icon i {
@@ -714,25 +708,47 @@ table {
     font-size: 0.9rem;
     top: -10px;
   }
-  .box-title-tow {
+  .box-title-two {
     font-size: 0.9rem;
     left: 10px;
   }
 }
 
-@media (max-width: 768px) {
-  .main-cards, .cards-tow, .cards-tree, .main-line, .cards-line-wan, .cards-line-tow {
+@media screen and (max-width: 768px) {
+  .filtering-container {
+    flex-direction: row;
+    gap: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #selectBoxAgeGroup select,
+  #selectBoxYear select,
+  #selectBoxCountry select,
+  #selectBoxProductCategory select {
+    font-size: 10px;
+    width: 120px;
+  }
+  .main-cards,
+  .cards-two,
+  .cards-three,
+  .main-line,
+  .cards-line-one,
+  .cards-line-two {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .cards-tree{
+  .cards-three {
     width: 100%;
   }
-  .box-wan, .box-tow-bar, .box-tree, .box-line-wan, .table-container {
+  .box-one,
+  .box-two-bar,
+  .box-three,
+  .box-line-one,
+  .table-container {
     width: 100%;
   }
-  .main-wan-title .box-title {
+  .main-one-title .box-title {
     font-size: 1rem;
   }
   .main-title-number {
@@ -748,35 +764,49 @@ table {
 }
 
 /*Extra Small */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .hedaer-left {
     display: none;
   }
-  .box-line-wan {
+  .filtering-container {
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  #selectBoxAgeGroup select,
+  #selectBoxYear select,
+  #selectBoxCountry select,
+  #selectBoxProductCategory select {
+    font-size: 10px;
+    width: 140px;
+  }
+  .box-line-one {
     font-size: 0.4rem;
     top: 10px;
   }
   .box-line-title {
     font-size: 0.6rem;
   }
-  .main-wan-title .box-title {
+  .main-one-title .box-title {
     font-size: 0.9rem;
   }
-  .cards-wan{
-    flex-wrap:wrap;
-    }
-  .box-wan{
+  .cards-one {
+    flex-wrap: wrap;
+  }
+  .box-one {
     margin-right: 0;
   }
   .main-title-number {
     font-size: 1rem;
   }
-  .box-title-tow, .box-line-title {
+  .box-title-two,
+  .box-line-title {
     font-size: 14px;
     padding: 2px 10px;
     top: -10px;
   }
-  .box-tree p {
+  .box-three p {
     font-size: 0.9rem;
   }
   .table-container h1 {
@@ -786,42 +816,40 @@ table {
   table {
     font-size: 10px;
   }
-  .main-wan-title .box-title {
+  .main-one-title .box-title {
     font-size: 0.9rem;
   }
   .main-title-number {
     font-size: 1rem;
   }
 
-  .box-title-tow {
+  .box-title-two {
     font-size: 14px;
     padding: 3px 8px;
   }
-  .cards-tow{
+  .cards-two {
     height: 100%;
     width: fit-content;
   }
-  .cards-tree{
+  .cards-three {
     width: 100%;
   }
 }
 
 /* Extra Extra small */
-@media (max-width: 390px){
-  .filtering-container{
-    gap: 15px;
+@media screen and (max-width: 390px) {
+  .filtering-container {
+    display: flex;
+    margin-right: 10px;
+    flex-direction: column;
   }
-  #selectBoxAgeGroup select, #selectBoxYear select, #selectBoxCountry select, #selectBoxProductCategory select{
-  width: 166px;
 }
-}
-
 /* light and dark mode*/
 /* dark*/
 
 /* light*/
 [data-theme="light"] {
-  --background-color: #ffffff;
+  --background-color: #fffdfd;
   --text-color: #000000;
   --header-background-color: #f0f0f0;
   --sidebar-background-color: #f0f0f0;
@@ -834,9 +862,9 @@ table {
   --header-background-color: #1a1a1a;
   --sidebar-background-color: #1a1a1a;
   --main-title-color: #ffffff;
-  --cards-tow-background-color: #ffffff;
-  --box-tow-bar: #ffffff;
-  --box-line-wan: #ffffff;
+  --cards-two-background-color: #ffffff;
+  --box-two-bar: #ffffff;
+  --box-line-one: #ffffff;
   --table-container: #ffffff;
 }
 
@@ -861,10 +889,10 @@ body {
   background-color: var(--background-color);
 }
 
-.box-wan,
-.box-tow-bar,
-.box-tree,
-.box-line-wan {
+.box-one,
+.box-two-bar,
+.box-three,
+.box-line-one {
   background-color: var(--card-background-color);
 }
 
@@ -877,11 +905,11 @@ body {
   color: var(--main-title-color);
 }
 
-.box-tow-bar {
+.box-two-bar {
   background-color: #ffffff;
 }
 
-.box-line-wan {
+.box-line-one {
   background-color: #ffffff;
 }
 
@@ -896,7 +924,7 @@ body {
 
 .insight-button {
   padding: 10px 20px;
-  background-color: #31bacb;;
+  background-color: #31bacb;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -905,7 +933,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .insight-button:hover {
-  background-color: #0a131c;
+  background-color: #083a41;
 }
 .text-area-hover {
   display: none;
@@ -920,7 +948,6 @@ body {
   margin-top: 10px;
   font-size: 13px;
 }
-.box-line-wan:hover .text-area-hover {
+.box-line-one:hover .text-area-hover {
   display: block;
 }
-  
