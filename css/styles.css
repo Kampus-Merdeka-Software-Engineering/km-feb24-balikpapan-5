@@ -442,9 +442,11 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: justify;
+  font-size: 14px;
+  word-spacing: 2px;
+  line-height: 25px;
   color: #000000;
   margin-top: 10px;
-  font-size: 13px;
 }
 
 .cards-three {
@@ -486,7 +488,8 @@ body {
   justify-content: center;
   text-align: justify;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 25px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 30px;
@@ -570,10 +573,11 @@ body {
   border-radius: 5px;
   display: none;
   text-align: justify;
-  width: 100%;
+  font-size: 14px;
+  word-spacing: 2px;
+  line-height: 25px;
   color: #000000;
   margin-top: 10px;
-  font-size: 13px;
 }
 .box-line-one:hover .text-area-hover {
   display: block;
